@@ -9,6 +9,10 @@ use App\Http\Controllers\ProductoController;
 use App\Http\Controllers\RedesController;
 use App\Http\Controllers\SubCategoriasController;
 use App\Http\Controllers\TestimonioController;
+use App\Models\Headertron;
+use App\Models\Informacion;
+use App\Models\Producto;
+use App\Models\Testimonio;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -23,8 +27,34 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('main.index');
+    $informacion = Informacion::first();
+    $head = Headertron::all();
+    $testimonio = Testimonio::first();
+    $images = '';
+    foreach ($head as $el) {
+        $images .= '"' . env('APP_URL') . '/storage/' . $el->imagen . '",';
+    }
+    $images =  substr($images, 0, -1);
+
+    // dd($testimonio);
+
+    // dd($images);
+
+    $productos = Producto::orderBy('updated_at','DESC')->limit(3)->get();
+    return view('main.index', compact('informacion', 'head', 'images','productos','testimonio'));
 });
+
+
+Route::get('/producto/{id}', function ($id) {
+
+    $informacion = Informacion::first();
+    $head = Headertron::all();
+    $producto = Producto::find($id);
+
+    return view('main.producto', compact('informacion', 'head', 'producto'));
+});
+
+
 
 
 Auth::routes([
@@ -35,18 +65,16 @@ Auth::routes([
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
+Route::resource('home/informacion', InformacionController::class);
+Route::resource('home/categoria', CategoriasController::class);
+Route::resource('home/subcategoria', SubCategoriasController::class);
+Route::resource('home/producto', ProductoController::class);
+
+Route::resource('home/cliente', ClientesController::class);
+Route::resource('home/testimonio', TestimonioController::class);
 
 
-Route::resource('informacion', InformacionController::class);
-Route::resource('categoria', CategoriasController::class);
-Route::resource('subcategoria', SubCategoriasController::class);
-Route::resource('producto', ProductoController::class);
+Route::resource('home/headertron', HeadertronController::class);
+Route::resource('home/horario', HorarioController::class);
 
-Route::resource('cliente', ClientesController::class);
-Route::resource('testimonio', TestimonioController::class);
-
-
-Route::resource('headertron', HeadertronController::class);
-Route::resource('horario', HorarioController::class);
-
-Route::resource('redes', RedesController::class);
+Route::resource('home/redes', RedesController::class);

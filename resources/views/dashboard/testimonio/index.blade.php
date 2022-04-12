@@ -8,7 +8,7 @@
                     <div class="card-header">{{ __('Testimonios') }}</div>
 
                     <div class="card-body">
-                        <a href="/testimonio/create" class="btn btn-primary">+ Testimonios</a>
+                        <a href="/home/testimonio/create" class="btn btn-primary">+ Testimonios</a>
                         &nbsp;
                         <table class="table table-striped table-hover">
                             <thead>
@@ -30,7 +30,7 @@
                                         <td>{{ $testimonio->title }}</td>
                                         <td>{{ $testimonio->descripcion }}</td>
                                         <td>
-                                            <a href="/testimonio/{{ $testimonio->id }}/edit">✏️</a>
+                                            <a href="/home/testimonio/{{ $testimonio->id }}/edit">✏️</a>
                                             <a href="#eliminar" onclick="eliminar({{ $testimonio->id }})">🗑️</a>
                                         </td>
                                     </tr>

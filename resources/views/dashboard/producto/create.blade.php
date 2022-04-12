@@ -20,6 +20,8 @@
                                 </div>
                             </div> --}}
 
+                            <pre>Tamaño de imagen   360 x 960 </pre>
+
                             <div class="text-center"
                                 style="height: 150px; width:150px; display: block; margin-left: auto; margin-right: auto;">
                                 <img src="{{ url('storage/') }}/placeholder.jpg" id="preview" class="img-thumbnail"

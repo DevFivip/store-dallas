@@ -24,7 +24,7 @@
                                         <td>{{ $horario->apertura }}</td>
                                         <td>{{ $horario->cierre }}</td>
                                         <td>
-                                            <a href="/horario/{{ $horario->id }}/edit">✏️</a>
+                                            <a href="/home/horario/{{ $horario->id }}/edit">✏️</a>
                                         </td>
                                     </tr>
                                 @endforeach

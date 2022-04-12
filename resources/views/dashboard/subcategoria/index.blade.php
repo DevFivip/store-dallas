@@ -8,7 +8,7 @@
                     <div class="card-header">{{ __('Subcategorias de Productos') }}</div>
 
                     <div class="card-body">
-                        <a href="/subcategoria/create" class="btn btn-primary">+ Subcategoria</a>
+                        <a href="/home/subcategoria/create" class="btn btn-primary">+ Subcategoria</a>
                         &nbsp;
                         <a href="/categoria/create" class="btn btn-primary">+ Categoria</a>
 
@@ -28,7 +28,7 @@
                                         <td>{{ $subcategoria->nombre }}</td>
                                         <td>{{ $subcategoria->categoria->nombre }}</td>
                                         <td>
-                                            <a href="/subcategoria/{{ $subcategoria->id }}/edit">✏️</a>
+                                            <a href="/home/subcategoria/{{ $subcategoria->id }}/edit">✏️</a>
                                             <a href="#eliminar" onclick="eliminar({{ $subcategoria->id }})">🗑️</a>
                                         </td>
                                     </tr>

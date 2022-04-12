@@ -8,7 +8,7 @@
                     <div class="card-header">{{ __('HeaderTron') }}</div>
 
                     <div class="card-body">
-                        <a href="/headertron/create" class="btn btn-primary">+ HeaderTron</a>
+                        <a href="/home/headertron/create" class="btn btn-primary">+ HeaderTron</a>
                         &nbsp;
                         <table class="table table-striped table-hover">
                             <thead>
@@ -30,7 +30,7 @@
                                         <td>{{ $headertron->title }}</td>
                                         <td>{{ $headertron->descripcion }}</td>
                                         <td>
-                                            <a href="/headertron/{{ $headertron->id }}/edit">✏️</a>
+                                            <a href="/home/headertron/{{ $headertron->id }}/edit">✏️</a>
                                             <a href="#eliminar" onclick="eliminar({{ $headertron->id }})">🗑️</a>
                                         </td>
                                     </tr>

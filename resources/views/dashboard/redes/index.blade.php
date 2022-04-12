@@ -22,7 +22,7 @@
                                         <td>{{ $red->nombre }}</td>
                                         <td>{{ $red->url }}</td>
                                         <td>
-                                            <a href="/redes/{{ $red->id }}/edit">✏️</a>
+                                            <a href="/home/redes/{{ $red->id }}/edit">✏️</a>
                                         </td>
                                     </tr>
                                 @endforeach

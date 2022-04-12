@@ -8,7 +8,7 @@
                     <div class="card-header">{{ __('Categorias de Productos') }}</div>
 
                     <div class="card-body">
-                        <a href="/categoria/create" class="btn btn-primary">+ Categoria</a>
+                        <a href="/home/categoria/create" class="btn btn-primary">+ Categoria</a>
 
                         <table class="table table-striped table-hover">
                             <thead>
@@ -24,7 +24,7 @@
                                         <td>{{ $categoria->id }}</td>
                                         <td>{{ $categoria->nombre }}</td>
                                         <td>
-                                            <a href="/categoria/{{ $categoria->id }}/edit">✏️</a>
+                                            <a href="/home/categoria/{{ $categoria->id }}/edit">✏️</a>
                                             <a href="#eliminar" onclick="eliminar({{ $categoria->id }})">🗑️</a>
 
                                         </td>

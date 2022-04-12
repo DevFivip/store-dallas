@@ -13,12 +13,11 @@
     <link type="text/css" media="all" href="css/autoptimize_8fd12c916b32a82c4c4f3d653adf8100.css" rel="stylesheet" />
     <link type="text/css" media="only screen and (max-width: 768px)"
         href="css/autoptimize_dcb2de333eec7ab4ae31385ed8d6a393.css" rel="stylesheet" />
-    <title>Weisber &#8211; Craft Beer WordPress Theme</title>
+    <title>{{ $informacion->empresa_nombre }}</title>
     <link rel="dns-prefetch" href="http://fonts.googleapis.com/" />
     <link rel="alternate" type="application/rss+xml" title="Weisber &raquo; Feed" href="feed/index.html" />
     <link rel="alternate" type="application/rss+xml" title="Weisber &raquo; Comments Feed"
         href="comments/feed/index.html" />
-    <link rel="alternate" type="text/calendar" title="Weisber &raquo; iCal Feed" href="events/indexedf3.html?ical=1" />
     <link rel="stylesheet" id="lt-colorpicker-font-css"
         href="http://fonts.googleapis.com/css?family=Open+Sans%7CPlayfair+Display%3A700&amp;ver=1.0#038;subset=latin"
         type="text/css" media="all" />
@@ -26,6 +25,9 @@
         href="http://fonts.googleapis.com/css?family=Lato%3A300%7CUbuntu%3A700&amp;ver=1.0#038;subset=latin"
         type="text/css" media="all" />
     <link rel="stylesheet" id="dashicons-css" href="css/dashicons.min.css" type="text/css" media="all" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <style id="weisber-theme-style-inline-css" type="text/css">
         @font-face {
             font-family: "weisber-fontello";
@@ -39,6 +41,7 @@
             font-style: normal;
         }
 
+
         :root {
             --black: #262022;
             --black-darker: #000000;
@@ -48,10 +51,10 @@
             --gray-lighter: rgba(246, 243, 238, 0.5);
             --white: #ffffff;
             --white-text: rgba(255, 255, 255, 0.75);
-            --main: #e6bf55;
-            --second: #769b54;
-            --main-darker: #c8a137;
-            --main-lighter: rgba(230, 191, 85, 0.5);
+            --main: #f3be22;
+            --second: #f3be22;
+            --main-darker: #e0a628;
+            --main-lighter: #fcb721;
             --red: #d4473a;
             --font-main: "Muli";
             --font-headers: "Catamaran";
@@ -93,58 +96,33 @@
     <link rel="stylesheet" id="weisber-fontello-css" href="css/autoptimize_single_ad88dea338759a0d95d490863ea56b06.css"
         type="text/css" media="all" />
     <script type="text/javascript" src="js/jquery/jquery.js"></script>
-    <link rel="https://api.w.org/" href="wp-json/index.html" />
-    <link rel="EditURI" type="application/rsd+xml" title="RSD" href="xmlrpc0db0.html?rsd" />
-    <link rel="wlwmanifest" type="application/wlwmanifest+xml" href="wlwmanifest.xml" />
-    <meta name="generator" content="WordPress 5.1.12" />
-    <meta name="generator" content="WooCommerce 3.6.6" />
     <link rel="canonical" href="index.html" />
     <link rel="shortlink" href="index.html" />
-    <link rel="alternate" type="application/json+oembed"
-        href="wp-json/oembed/1.0/embed4972.json?url=http%3A%2F%2Fweisber.like-themes.com%2F" />
-    <link rel="alternate" type="text/xml+oembed"
-        href="wp-json/oembed/1.0/embedb0ef?url=http%3A%2F%2Fweisber.like-themes.com%2F&amp;format=xml" />
-    <meta name="tec-api-version" content="v1" />
-    <meta name="tec-api-origin" content="http://weisber.like-themes.com" />
-    <link rel="https://theeventscalendar.com/" href="wp-json/tribe/events/v1/index.html" />
-    <noscript>
-        <style>
-            .woocommerce-product-gallery {
-                opacity: 1 !important;
-            }
+    <meta name="generator" content="{{ $informacion->empresa_nombre }}" />
 
-        </style>
-    </noscript>
-    <meta name="generator" content="Powered by WPBakery Page Builder - drag and drop page builder for WordPress." />
-    <!--[if lte IE 9
-      ]><link
-        rel="stylesheet"
-        type="text/css"
-        href="http://weisber.like-themes.com/wp-content/plugins/js_composer/assets/css/vc_lte_ie9.min.css"
-        media="screen"
-    /><![endif]-->
     <link rel="icon" href="uploads/2018/02/cropped-favicon-48x48.png" sizes="32x32" />
     <link rel="icon" href="uploads/2018/02/cropped-favicon-275x275.png" sizes="192x192" />
     <link rel="apple-touch-icon-precomposed" href="uploads/2018/02/cropped-favicon-275x275.png" />
     <meta name="msapplication-TileImage" content="uploads/2018/02/cropped-favicon-275x275.png" />
     <style type="text/css" data-type="vc_shortcodes-custom-css">
         .vc_custom_1555342687747 {
-            background-image: url('wp-content/uploads/2018/02/wood_BGbd79.jpg?id=8652') !important;
+            background-image: url('/storage/bg21.jpg') !important;
             background-position: center !important;
             background-repeat: no-repeat !important;
             background-size: cover !important;
         }
 
         .vc_custom_1555267804762 {
-            background-image: url("uploads/2018/02/paper_BG.jpg?id=8645") !important;
+            background-image: url("/storage/paper_BG.jpg") !important;
+
         }
 
         .vc_custom_1574021932274 {
-            background-image: url("uploads/2018/02/hop_parallax.jpg?id=8644") !important;
+            background-image: url("/storage/bg1.jpg") !important;
         }
 
         .vc_custom_1574021991555 {
-            background-image: url("uploads/2018/02/testimonials_parallax-jpg.jpg?id=8654") !important;
+            background-image: url("/storage/bg4.jpg") !important;
         }
 
         .vc_custom_1555274866754 {
@@ -220,63 +198,19 @@
             <div id="nav-wrapper" class="navbar-layout-desktop-center-transparent">
                 <nav class="navbar" data-spy="" data-offset-top="0">
                     <div class="container">
-                        <div class="ltx-navbar-social">
-                            <div class="ltx-social ltx-nav-second ltx-type-">
-                                <ul>
-                                    <li>
-                                        <a href="#" target="_self"><span class="fa fa-twitter"></span></a>
-                                    </li>
-                                    <li>
-                                        <a href="#" target="_self"><span class="fa fa-facebook-f"></span></a>
-                                    </li>
-                                    <li>
-                                        <a href="#" target="_self"><span class="fa fa-instagram"></span></a>
-                                    </li>
-                                    <li>
-                                        <a href="#" target="_self"><span class="fa fa-google-plus"></span></a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
+
                         <div class="navbar-logo">
-                            <a class="logo" href="index.html"><img src="uploads/2018/02/logo_white_1x-1.png"
-                                    alt="Weisber"
-                                    srcset="uploads/2018/02/logo_white_1x-1.png 1x,uploads/2018/02/logo_white_2x-1.png 2x" /></a>
+                            <a class="logo" href="/"><img src="/storage/{{ $informacion->logo }}"
+                                    alt="{{ $informacion->empresa_nombre }}"
+                                    srcset="/storage/{{ $informacion->logo }} 1x,/storage/{{ $informacion->logo }} 2x" /></a>
                         </div>
-                        <div class="ltx-navbar-icons">
-                            <ul>
-                                <li
-                                    class="ltx-fa-icon ltx-nav-profile menu-item-has-children hidden-sm hidden-ms hidden-xs">
-                                    <a href="my-account/index.html"><span class="fa fa fa-user"></span>
-                                    </a>
-                                </li>
-                                <li class="ltx-fa-icon ltx-nav-cart hidden-sm hidden-ms hidden-xs">
-                                    <div class="cart-navbar">
-                                        <a href="cart/index.html" class="ltx-cart cart shop_table"
-                                            title="View your shopping cart"><span
-                                                class="cart-contents header-cart-count count">0</span><i
-                                                class="fa fa fa-shopping-bag" aria-hidden="true"></i>
-                                        </a>
-                                    </div>
-                                </li>
-                                <li class="ltx-fa-icon ltx-nav-search hidden-sm hidden-ms hidden-xs">
-                                    <div class="top-search">
-                                        <a href="#" id="top-search-ico" class="top-search-ico fa fa-search"
-                                            aria-hidden="true"></a>
-                                        <a href="#" id="top-search-ico-close" class="top-search-ico-close"
-                                            aria-hidden="true">&times;</a>
-                                        <input placeholder="Search" value="" type="text" />
-                                    </div>
-                                </li>
-                            </ul>
-                        </div>
+
                         <div id="navbar" class="navbar-collapse collapse" data-mobile-screen-width="1600">
                             <div class="toggle-wrap">
-                                <a class="logo" href="index.html"><img
-                                        src="uploads/2018/02/logo_white_1x-1.png" alt="Weisber" srcset="
-                        //weisber.like-themes.com/wp-content/uploads/2018/02/logo_white_1x-1.png 1x,
-                        //weisber.like-themes.com/wp-content/uploads/2018/02/logo_white_2x-1.png 2x
-                      " /></a>
+                                <a class="logo" href="/"><img src="/storage/{{ $informacion->logo }}"
+                                        alt="Weisber" srcset="
+                                        /storage/{{ $informacion->logo }} 1x,
+                                        /storage/{{ $informacion->logo }} 2x" /></a>
                                 <button type="button" class="navbar-toggle collapsed">
                                     <span class="close">&times;</span>
                                 </button>
@@ -285,37 +219,7 @@
                             <ul id="menu-main-menu" class="nav navbar-nav">
                                 <li id="menu-item-8571"
                                     class="menu-item menu-item-type-custom menu-item-object-custom current-menu-ancestor current-menu-parent menu-item-has-children menu-item-8571">
-                                    <a href="#"><span>Home</span></a>
-                                    <ul class="sub-menu">
-                                        <li id="menu-item-7927"
-                                            class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-7925 current_page_item menu-item-7927">
-                                            <a href="index.html"><span>Craft Brewery</span></a>
-                                        </li>
-                                        <li id="menu-item-8793"
-                                            class="menu-item menu-item-type-post_type menu-item-object-page menu-item-8793">
-                                            <a href="homepage-promo/index.html"><span>Promo</span></a>
-                                        </li>
-                                        <li id="menu-item-8884"
-                                            class="menu-item menu-item-type-post_type menu-item-object-page menu-item-8884">
-                                            <a href="homepage-beer-pub/index.html"><span>Beer Pub</span></a>
-                                        </li>
-                                        <li id="menu-item-8882"
-                                            class="menu-item menu-item-type-post_type menu-item-object-page menu-item-8882">
-                                            <a href="homepage-beer-parallax/index.html"><span>Beer Parallax</span></a>
-                                        </li>
-                                        <li id="menu-item-9041"
-                                            class="menu-item menu-item-type-post_type menu-item-object-page menu-item-9041">
-                                            <a href="homepage-sliced/index.html"><span>Sliced</span></a>
-                                        </li>
-                                        <li id="menu-item-8883"
-                                            class="menu-item menu-item-type-post_type menu-item-object-page menu-item-8883">
-                                            <a href="homepage-restaurant/index.html"><span>Restaurant</span></a>
-                                        </li>
-                                        <li id="menu-item-9239"
-                                            class="menu-item menu-item-type-post_type menu-item-object-page menu-item-9239">
-                                            <a href="hompage-beer-brand/index.html"><span>Beer Brand</span></a>
-                                        </li>
-                                    </ul>
+                                    <a href="/"><span>Home</span></a>
                                 </li>
                                 <li id="menu-item-3557"
                                     class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-3557">
@@ -361,195 +265,13 @@
                                         </li>
                                     </ul>
                                 </li>
-                                <li id="menu-item-59"
-                                    class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-59">
-                                    <a><span>Blog</span></a>
-                                    <ul class="sub-menu">
-                                        <li id="menu-item-3976"
-                                            class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-3976">
-                                            <a href="#"><span>Blog with Sidebar</span></a>
-                                            <ul class="sub-menu">
-                                                <li id="menu-item-43"
-                                                    class="menu-item menu-item-type-post_type menu-item-object-page menu-item-43">
-                                                    <a href="classic-blog-with-right-sidebar/index.html"><span>Classic
-                                                            Right Sidebar</span></a>
-                                                </li>
-                                                <li id="menu-item-7844"
-                                                    class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7844">
-                                                    <a href="blog-3-columns-with-right-sidebar/index.html"><span>Masonry
-                                                            with Right Sidebar</span></a>
-                                                </li>
-                                            </ul>
-                                        </li>
-                                        <li id="menu-item-3977"
-                                            class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-3977">
-                                            <a href="#"><span>Blog without Sidebar</span></a>
-                                            <ul class="sub-menu">
-                                                <li id="menu-item-3975"
-                                                    class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3975">
-                                                    <a href="classic-blog-without-sidebar/index.html"><span>Classic
-                                                            Blog</span></a>
-                                                </li>
-                                                <li id="menu-item-45"
-                                                    class="menu-item menu-item-type-post_type menu-item-object-page menu-item-45">
-                                                    <a href="blog-two-columns-without-sidebar/index.html"><span>Masonry
-                                                            2-Columns</span></a>
-                                                </li>
-                                                <li id="menu-item-44"
-                                                    class="menu-item menu-item-type-post_type menu-item-object-page menu-item-44">
-                                                    <a href="blog-three-columns/index.html"><span>Masonry
-                                                            3-Columns</span></a>
-                                                </li>
-                                            </ul>
-                                        </li>
-                                    </ul>
-                                </li>
-                                <li id="menu-item-60"
-                                    class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-60">
-                                    <a><span>Gallery</span></a>
-                                    <ul class="sub-menu">
-                                        <li id="menu-item-47"
-                                            class="menu-item menu-item-type-post_type menu-item-object-page menu-item-47">
-                                            <a href="gallery-2-columns/index.html"><span>Gallery 2-columns</span></a>
-                                        </li>
-                                        <li id="menu-item-48"
-                                            class="menu-item menu-item-type-post_type menu-item-object-page menu-item-48">
-                                            <a href="gallery-3-columns/index.html"><span>Gallery 3-columns</span></a>
-                                        </li>
-                                        <li id="menu-item-49"
-                                            class="menu-item menu-item-type-post_type menu-item-object-page menu-item-49">
-                                            <a href="gallery-4-columns/index.html"><span>Gallery 4-columns</span></a>
-                                        </li>
-                                    </ul>
-                                </li>
-                                <li id="menu-item-61"
-                                    class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-has-mega-menu menu-item-61">
-                                    <a href="#"><span>Pages</span></a>
-                                    <div class="mega-menu">
-                                        <ul class="sub-menu mega-menu-row">
-                                            <li id="menu-item-783"
-                                                class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children mega-menu-col menu-item-783">
-                                                <a><span>Typography</span></a>
-                                                <ul class="sub-menu sub-menu-has-icons">
-                                                    <li id="menu-item-597"
-                                                        class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-icon menu-item-597">
-                                                        <a href="elements/headers/index.html"
-                                                            class="fa fa-font"><span>Headers</span></a>
-                                                    </li>
-                                                    <li id="menu-item-579"
-                                                        class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-icon menu-item-579">
-                                                        <a href="elements/text/index.html"
-                                                            class="fa fa-align-left"><span>Text</span></a>
-                                                    </li>
-                                                    <li id="menu-item-594"
-                                                        class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-icon menu-item-594">
-                                                        <a href="elements/text_columns/index.html"
-                                                            class="fa fa-columns"><span>Text Columns</span></a>
-                                                    </li>
-                                                    <li id="menu-item-643"
-                                                        class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-icon menu-item-643">
-                                                        <a href="elements/table/index.html"
-                                                            class="fa fa-table"><span>Table</span></a>
-                                                    </li>
-                                                    <li id="menu-item-588"
-                                                        class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-icon menu-item-588">
-                                                        <a href="elements/separators/index.html"
-                                                            class="fa fa-arrows-h"><span>Separators</span></a>
-                                                    </li>
-                                                </ul>
-                                            </li>
-                                            <li id="menu-item-784"
-                                                class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children mega-menu-col menu-item-784">
-                                                <a><span>Form Elements</span></a>
-                                                <ul class="sub-menu sub-menu-has-icons">
-                                                    <li id="menu-item-555"
-                                                        class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-icon menu-item-555">
-                                                        <a href="elements/buttons/index.html"
-                                                            class="fa fa-mouse-pointer"><span>Buttons</span></a>
-                                                    </li>
-                                                    <li id="menu-item-705"
-                                                        class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-icon menu-item-705">
-                                                        <a href="elements/forms/index.html"
-                                                            class="fa fa-edit"><span>Forms</span></a>
-                                                    </li>
-                                                </ul>
-                                            </li>
-                                            <li id="menu-item-785"
-                                                class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children mega-menu-col menu-item-785">
-                                                <a><span>Shortcodes</span></a>
-                                                <ul class="sub-menu sub-menu-has-icons">
-                                                    <li id="menu-item-527"
-                                                        class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-icon menu-item-527">
-                                                        <a href="elements/accordions/index.html"
-                                                            class="fa fa-list"><span>Accordions</span></a>
-                                                    </li>
-                                                    <li id="menu-item-538"
-                                                        class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-icon menu-item-538">
-                                                        <a href="elements/alert/index.html"
-                                                            class="fa fa-exclamation-triangle"><span>Alerts</span></a>
-                                                    </li>
-                                                    <li id="menu-item-568"
-                                                        class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-icon menu-item-568">
-                                                        <a href="elements/tabs/index.html"
-                                                            class="fa fa-th-large"><span>Tabs</span></a>
-                                                    </li>
-                                                    <li id="menu-item-56"
-                                                        class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-icon menu-item-56">
-                                                        <a href="elements/shortcodes/index.html"
-                                                            class="fa fa-caret-square-o-right"><span>Shortcodes</span></a>
-                                                    </li>
-                                                </ul>
-                                            </li>
-                                            <li id="menu-item-786"
-                                                class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children mega-menu-col menu-item-786">
-                                                <a href="#"><span>Lists</span></a>
-                                                <ul class="sub-menu sub-menu-has-icons">
-                                                    <li id="menu-item-675"
-                                                        class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-icon menu-item-675">
-                                                        <a href="elements/icons-page/index.html"
-                                                            class="fa fa-gratipay"><span>Icons</span></a>
-                                                    </li>
-                                                    <li id="menu-item-562"
-                                                        class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-icon menu-item-562">
-                                                        <a href="elements/list/index.html"
-                                                            class="fa fa-twitter"><span>Lists and Social
-                                                                Icons</span></a>
-                                                    </li>
-                                                </ul>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </li>
+
                                 <li id="menu-item-46"
                                     class="menu-item menu-item-type-post_type menu-item-object-page menu-item-46">
                                     <a href="contacts/index.html"><span>Contacts</span></a>
                                 </li>
                             </ul>
                             <div class="mobile-controls">
-                                <div>
-                                    <ul>
-                                        <li class="ltx-fa-icon ltx-nav-profile menu-item-has-children">
-                                            <a href="my-account/index.html"><span class="fa fa fa-user"></span>
-                                            </a>
-                                        </li>
-                                        <li class="ltx-fa-icon ltx-nav-cart">
-                                            <div class="cart-navbar">
-                                                <a href="cart/index.html" class="ltx-cart cart shop_table"
-                                                    title="View your shopping cart"><span
-                                                        class="cart-contents header-cart-count count">0</span><i
-                                                        class="fa fa fa-shopping-bag" aria-hidden="true"></i>
-                                                </a>
-                                            </div>
-                                        </li>
-                                        <li class="ltx-fa-icon ltx-nav-search">
-                                            <div class="top-search">
-                                                <a href="#" id="top-search-ico-mobile"
-                                                    class="top-search-ico fa fa-search" aria-hidden="true"></a>
-                                                <input placeholder="Search" value="" type="text" />
-                                            </div>
-                                        </li>
-                                    </ul>
-                                </div>
                             </div>
                         </div>
                         <div class="navbar-controls">
@@ -579,480 +301,107 @@
                                                     id="like_sc_zoom_slider_472432798" data-zs-prev="" data-zs-next=""
                                                     data-zs-overlay="dots" data-zs-initzoom="1.2" data-zs-speed="20000"
                                                     data-zs-interval="4500" data-zs-switchSpeed="7000"
-                                                    data-zs-arrows="true" data-zs-bullets="false"
-                                                    data-zs-src="[&#34;http:\/\/weisber.like-themes.com\/wp-content\/uploads\/2018\/02\/SLIDE_01.jpg&#34;,&#34;http:\/\/weisber.like-themes.com\/wp-content\/uploads\/2018\/02\/SLIDE_02.jpg&#34;,&#34;http:\/\/weisber.like-themes.com\/wp-content\/uploads\/2018\/02\/SLIDE_03.jpg&#34;,&#34;http:\/\/weisber.like-themes.com\/wp-content\/uploads\/2018\/02\/SLIDE_04.jpg&#34;,&#34;http:\/\/weisber.like-themes.com\/wp-content\/uploads\/2018\/02\/SLIDE_05.jpg&#34;]">
+                                                    data-zs-arrows="false" data-zs-bullets="true" {{-- data-zs-src="[&#34;http:\/\/weisber.like-themes.com\/wp-content\/uploads\/2018\/02\/SLIDE_02.jpg&#34;,&#34;http:\/\/weisber.like-themes.com\/wp-content\/uploads\/2018\/02\/SLIDE_03.jpg&#34;,&#34;http:\/\/weisber.like-themes.com\/wp-content\/uploads\/2018\/02\/SLIDE_04.jpg&#34;,&#34;http:\/\/weisber.like-themes.com\/wp-content\/uploads\/2018\/02\/SLIDE_05.jpg&#34;]"> --}}
+                                                    data-zs-src="[{{ $images }}]">
+
                                                     <div class="container ltx-zs-slider-wrapper">
-                                                        <div class="ltx-zs-slider-inner inited visible ltx-zs-slide-0"
-                                                            data-index="0">
-                                                            <div
-                                                                class="vc_row wpb_row vc_row-fluid vc_row-o-content-middle vc_row-flex text-align-center">
+                                                        @foreach ($head as $key => $el)
+                                                            <div class="ltx-zs-slider-inner 
+                                                        @if ($key === 0) {{ 'inited visible' }} @endif
+                                                        ltx-zs-slide-{{ $key }}"
+                                                                data-index="{{ $key }}">
                                                                 <div
-                                                                    class="wpb_column vc_column_container vc_col-sm-12">
-                                                                    <div class="vc_column-inner">
-                                                                        <div class="wpb_wrapper">
-                                                                            <div class="es-resp">
-                                                                                <div class="visible-xl"
-                                                                                    style="height: 90px"></div>
-                                                                                <div class="hidden-xl hidden-md hidden-sm hidden-ms hidden-xs"
-                                                                                    style="height: 90px"></div>
-                                                                                <div class="visible-md"
-                                                                                    style="height: 90px"></div>
-                                                                                <div class="visible-sm"
-                                                                                    style="height: 90px"></div>
-                                                                                <div class="visible-ms"
-                                                                                    style="height: 0px"></div>
-                                                                                <div class="visible-xs"
-                                                                                    style="height: 0px"></div>
-                                                                            </div>
-                                                                            <div class="heading heading-large default align-center color-white subcolor-main transform-default icon-type-hidden heading-tag-h1"
-                                                                                id="like_sc_header_112048082">
-                                                                                <h1
-                                                                                    class="header -id-like_sc_header_112048082552327794 -effect-fade_in -el-block -delay-0 -duration-1000 -sequences-0">
-                                                                                    Private <span> Craft Brewery </span>
-                                                                                </h1>
-                                                                            </div>
-                                                                            <div class="ltx-content-width col-align-center"
-                                                                                id="like_sc_content_width_2058161930"
-                                                                                style="max-width: 700px">
-                                                                                <div class="ltx-wrapper">
-                                                                                    <div
-                                                                                        class="wpb_text_column wpb_content_element">
-                                                                                        <div class="wpb_wrapper">
-                                                                                            <p
-                                                                                                style="text-align: center">
-                                                                                                Nulla imperdiet ultrices
-                                                                                                quam,
-                                                                                                et semper nibh fringilla
-                                                                                                in.
-                                                                                                Aenean a porttitor nisl,
-                                                                                                sed
-                                                                                                laoreet mauris.
-                                                                                                Pellentesque
-                                                                                                fermentum gravida massa,
-                                                                                                eu
-                                                                                                ultrices enim tincidunt
-                                                                                                id.
-                                                                                            </p>
+                                                                    class="vc_row wpb_row vc_row-fluid vc_row-o-content-middle vc_row-flex text-align-center">
+                                                                    <div
+                                                                        class="wpb_column vc_column_container vc_col-sm-12">
+                                                                        <div class="vc_column-inner">
+                                                                            <div class="wpb_wrapper">
+                                                                                <div class="es-resp">
+                                                                                    <div class="visible-xl"
+                                                                                        style="height: 90px"></div>
+                                                                                    <div class="hidden-xl hidden-md hidden-sm hidden-ms hidden-xs"
+                                                                                        style="height: 90px"></div>
+                                                                                    <div class="visible-md"
+                                                                                        style="height: 90px"></div>
+                                                                                    <div class="visible-sm"
+                                                                                        style="height: 90px"></div>
+                                                                                    <div class="visible-ms"
+                                                                                        style="height: 0px"></div>
+                                                                                    <div class="visible-xs"
+                                                                                        style="height: 0px"></div>
+                                                                                </div>
+                                                                                <div class="heading heading-large default align-center color-white subcolor-main transform-default icon-type-hidden heading-tag-h1"
+                                                                                    id="like_sc_header_112048082">
+                                                                                    <h1
+                                                                                        class="header -id-like_sc_header_112048082552327794 -effect-fade_in -el-block -delay-0 -duration-1000 -sequences-0">
+                                                                                        {!! $el->title !!}
+                                                                                    </h1>
+                                                                                </div>
+                                                                                <div class="ltx-content-width col-align-center"
+                                                                                    id="like_sc_content_width_2058161930"
+                                                                                    style="max-width: 700px">
+                                                                                    <div class="ltx-wrapper">
+                                                                                        <div
+                                                                                            class="wpb_text_column wpb_content_element">
+                                                                                            <div class="wpb_wrapper">
+                                                                                                <p
+                                                                                                    style="text-align: center">
+                                                                                                    {!! $el->descripcion !!}
+                                                                                                </p>
+                                                                                            </div>
                                                                                         </div>
                                                                                     </div>
                                                                                 </div>
-                                                                            </div>
-                                                                            <div class="es-resp">
-                                                                                <div class="visible-xl"
-                                                                                    style="height: 80px"></div>
-                                                                                <div class="hidden-xl hidden-md hidden-sm hidden-ms hidden-xs"
-                                                                                    style="height: 80px"></div>
-                                                                                <div class="visible-md"
-                                                                                    style="height: 80px"></div>
-                                                                                <div class="visible-sm"
-                                                                                    style="height: 80px"></div>
-                                                                                <div class="visible-ms"
-                                                                                    style="height: 80px"></div>
-                                                                                <div class="visible-xs"
-                                                                                    style="height: 80px"></div>
-                                                                            </div>
-                                                                            <div
-                                                                                class="btn-wrap align-center btn-wrap-inline">
-                                                                                <a href="shop/index.html"
-                                                                                    class="btn btn-main color-hover-white align-center"
-                                                                                    id="like_sc_button_187348038">Get
-                                                                                    beer</a>
-                                                                            </div>
-                                                                            <div class="es-resp">
-                                                                                <div class="visible-xl"
-                                                                                    style="height: 280px"></div>
-                                                                                <div class="hidden-xl hidden-md hidden-sm hidden-ms hidden-xs"
-                                                                                    style="height: 240px"></div>
-                                                                                <div class="visible-md"
-                                                                                    style="height: 240px"></div>
-                                                                                <div class="visible-sm"
-                                                                                    style="height: 240px"></div>
-                                                                                <div class="visible-ms"
-                                                                                    style="height: 240px"></div>
-                                                                                <div class="visible-xs"
-                                                                                    style="height: 240px"></div>
+                                                                                <div class="es-resp">
+                                                                                    <div class="visible-xl"
+                                                                                        style="height: 80px"></div>
+                                                                                    <div class="hidden-xl hidden-md hidden-sm hidden-ms hidden-xs"
+                                                                                        style="height: 80px"></div>
+                                                                                    <div class="visible-md"
+                                                                                        style="height: 80px"></div>
+                                                                                    <div class="visible-sm"
+                                                                                        style="height: 80px"></div>
+                                                                                    <div class="visible-ms"
+                                                                                        style="height: 80px"></div>
+                                                                                    <div class="visible-xs"
+                                                                                        style="height: 80px"></div>
+                                                                                </div>
+                                                                                <div
+                                                                                    class="btn-wrap align-center btn-wrap-inline">
+                                                                                    @if (!!$el->link_to)
+                                                                                        <a href="{{ $el->link_to }}"
+                                                                                            class="btn btn-main color-hover-white align-center"
+                                                                                            id="like_sc_button_187348038">Ver
+                                                                                            Mas</a>
+                                                                                    @endif
+                                                                                    @if (!!!$el->link_to)
+                                                                                        <a href="#!"
+                                                                                            class="btn btn-main color-hover-white align-center"
+                                                                                            id="like_sc_button_187348038">Ver
+                                                                                            Mas</a>
+                                                                                    @endif
+                                                                                </div>
+
+                                                                                <div class="es-resp">
+                                                                                    <div class="visible-xl"
+                                                                                        style="height: 280px"></div>
+                                                                                    <div class="hidden-xl hidden-md hidden-sm hidden-ms hidden-xs"
+                                                                                        style="height: 240px"></div>
+                                                                                    <div class="visible-md"
+                                                                                        style="height: 240px"></div>
+                                                                                    <div class="visible-sm"
+                                                                                        style="height: 240px"></div>
+                                                                                    <div class="visible-ms"
+                                                                                        style="height: 240px"></div>
+                                                                                    <div class="visible-xs"
+                                                                                        style="height: 240px"></div>
+                                                                                </div>
                                                                             </div>
                                                                         </div>
                                                                     </div>
                                                                 </div>
                                                             </div>
-                                                        </div>
-                                                        <div class="ltx-zs-slider-inner ltx-zs-slide-1" data-index="1">
-                                                            <div
-                                                                class="vc_row wpb_row vc_row-fluid vc_row-o-content-middle vc_row-flex text-align-center">
-                                                                <div
-                                                                    class="wpb_column vc_column_container vc_col-sm-12">
-                                                                    <div class="vc_column-inner">
-                                                                        <div class="wpb_wrapper">
-                                                                            <div class="es-resp">
-                                                                                <div class="visible-xl"
-                                                                                    style="height: 90px"></div>
-                                                                                <div class="hidden-xl hidden-md hidden-sm hidden-ms hidden-xs"
-                                                                                    style="height: 90px"></div>
-                                                                                <div class="visible-md"
-                                                                                    style="height: 90px"></div>
-                                                                                <div class="visible-sm"
-                                                                                    style="height: 90px"></div>
-                                                                                <div class="visible-ms"
-                                                                                    style="height: 0px"></div>
-                                                                                <div class="visible-xs"
-                                                                                    style="height: 0px"></div>
-                                                                            </div>
-                                                                            <div class="heading heading-large default align-center color-white subcolor-main transform-default icon-type-hidden heading-tag-h1"
-                                                                                id="like_sc_header_1806387750">
-                                                                                <h1
-                                                                                    class="header -id-like_sc_header_1806387750589951504 -effect-fade_in -el-block -delay-0 -duration-1000 -sequences-0">
-                                                                                    Traditions <span> of Brewing </span>
-                                                                                </h1>
-                                                                            </div>
-                                                                            <div class="ltx-content-width col-align-center"
-                                                                                id="like_sc_content_width_1795094803"
-                                                                                style="max-width: 700px">
-                                                                                <div class="ltx-wrapper">
-                                                                                    <div
-                                                                                        class="wpb_text_column wpb_content_element">
-                                                                                        <div class="wpb_wrapper">
-                                                                                            <p
-                                                                                                style="text-align: center">
-                                                                                                Nulla imperdiet ultrices
-                                                                                                quam,
-                                                                                                et semper nibh fringilla
-                                                                                                in.
-                                                                                                Aenean a porttitor nisl,
-                                                                                                sed
-                                                                                                laoreet mauris.
-                                                                                                Pellentesque
-                                                                                                fermentum gravida massa,
-                                                                                                eu
-                                                                                                ultrices enim tincidunt
-                                                                                                id.
-                                                                                            </p>
-                                                                                        </div>
-                                                                                    </div>
-                                                                                </div>
-                                                                            </div>
-                                                                            <div class="es-resp">
-                                                                                <div class="visible-xl"
-                                                                                    style="height: 80px"></div>
-                                                                                <div class="hidden-xl hidden-md hidden-sm hidden-ms hidden-xs"
-                                                                                    style="height: 80px"></div>
-                                                                                <div class="visible-md"
-                                                                                    style="height: 80px"></div>
-                                                                                <div class="visible-sm"
-                                                                                    style="height: 80px"></div>
-                                                                                <div class="visible-ms"
-                                                                                    style="height: 80px"></div>
-                                                                                <div class="visible-xs"
-                                                                                    style="height: 80px"></div>
-                                                                            </div>
-                                                                            <div
-                                                                                class="btn-wrap align-center btn-wrap-inline">
-                                                                                <a href="shop/index.html"
-                                                                                    class="btn btn-main color-hover-white align-center"
-                                                                                    id="like_sc_button_1333095954">Get
-                                                                                    beer</a>
-                                                                            </div>
-                                                                            <div class="es-resp">
-                                                                                <div class="visible-xl"
-                                                                                    style="height: 280px"></div>
-                                                                                <div class="hidden-xl hidden-md hidden-sm hidden-ms hidden-xs"
-                                                                                    style="height: 240px"></div>
-                                                                                <div class="visible-md"
-                                                                                    style="height: 240px"></div>
-                                                                                <div class="visible-sm"
-                                                                                    style="height: 240px"></div>
-                                                                                <div class="visible-ms"
-                                                                                    style="height: 240px"></div>
-                                                                                <div class="visible-xs"
-                                                                                    style="height: 240px"></div>
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <div class="ltx-zs-slider-inner ltx-zs-slide-2" data-index="2">
-                                                            <div
-                                                                class="vc_row wpb_row vc_row-fluid vc_row-o-content-middle vc_row-flex text-align-center">
-                                                                <div
-                                                                    class="wpb_column vc_column_container vc_col-sm-12">
-                                                                    <div class="vc_column-inner">
-                                                                        <div class="wpb_wrapper">
-                                                                            <div class="es-resp">
-                                                                                <div class="visible-xl"
-                                                                                    style="height: 90px"></div>
-                                                                                <div class="hidden-xl hidden-md hidden-sm hidden-ms hidden-xs"
-                                                                                    style="height: 90px"></div>
-                                                                                <div class="visible-md"
-                                                                                    style="height: 90px"></div>
-                                                                                <div class="visible-sm"
-                                                                                    style="height: 90px"></div>
-                                                                                <div class="visible-ms"
-                                                                                    style="height: 0px"></div>
-                                                                                <div class="visible-xs"
-                                                                                    style="height: 0px"></div>
-                                                                            </div>
-                                                                            <div class="heading heading-large default align-center color-white subcolor-main transform-default icon-type-hidden heading-tag-h1"
-                                                                                id="like_sc_header_1709737159">
-                                                                                <h1
-                                                                                    class="header -id-like_sc_header_17097371591727705902 -effect-fade_in -el-block -delay-0 -duration-1000 -sequences-0">
-                                                                                    Beer Culture <span> Leader </span>
-                                                                                </h1>
-                                                                            </div>
-                                                                            <div class="ltx-content-width col-align-center"
-                                                                                id="like_sc_content_width_1273128095"
-                                                                                style="max-width: 700px">
-                                                                                <div class="ltx-wrapper">
-                                                                                    <div
-                                                                                        class="wpb_text_column wpb_content_element">
-                                                                                        <div class="wpb_wrapper">
-                                                                                            <p
-                                                                                                style="text-align: center">
-                                                                                                Nulla imperdiet ultrices
-                                                                                                quam,
-                                                                                                et semper nibh fringilla
-                                                                                                in.
-                                                                                                Aenean a porttitor nisl,
-                                                                                                sed
-                                                                                                laoreet mauris.
-                                                                                                Pellentesque
-                                                                                                fermentum gravida massa,
-                                                                                                eu
-                                                                                                ultrices enim tincidunt
-                                                                                                id.
-                                                                                            </p>
-                                                                                        </div>
-                                                                                    </div>
-                                                                                </div>
-                                                                            </div>
-                                                                            <div class="es-resp">
-                                                                                <div class="visible-xl"
-                                                                                    style="height: 80px"></div>
-                                                                                <div class="hidden-xl hidden-md hidden-sm hidden-ms hidden-xs"
-                                                                                    style="height: 80px"></div>
-                                                                                <div class="visible-md"
-                                                                                    style="height: 80px"></div>
-                                                                                <div class="visible-sm"
-                                                                                    style="height: 80px"></div>
-                                                                                <div class="visible-ms"
-                                                                                    style="height: 80px"></div>
-                                                                                <div class="visible-xs"
-                                                                                    style="height: 80px"></div>
-                                                                            </div>
-                                                                            <div
-                                                                                class="btn-wrap align-center btn-wrap-inline">
-                                                                                <a href="shop/index.html"
-                                                                                    class="btn btn-main color-hover-white align-center"
-                                                                                    id="like_sc_button_1125034727">Get
-                                                                                    beer</a>
-                                                                            </div>
-                                                                            <div class="es-resp">
-                                                                                <div class="visible-xl"
-                                                                                    style="height: 280px"></div>
-                                                                                <div class="hidden-xl hidden-md hidden-sm hidden-ms hidden-xs"
-                                                                                    style="height: 240px"></div>
-                                                                                <div class="visible-md"
-                                                                                    style="height: 240px"></div>
-                                                                                <div class="visible-sm"
-                                                                                    style="height: 240px"></div>
-                                                                                <div class="visible-ms"
-                                                                                    style="height: 240px"></div>
-                                                                                <div class="visible-xs"
-                                                                                    style="height: 240px"></div>
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <div class="ltx-zs-slider-inner ltx-zs-slide-3" data-index="3">
-                                                            <div
-                                                                class="vc_row wpb_row vc_row-fluid vc_row-o-content-middle vc_row-flex text-align-center">
-                                                                <div
-                                                                    class="wpb_column vc_column_container vc_col-sm-12">
-                                                                    <div class="vc_column-inner">
-                                                                        <div class="wpb_wrapper">
-                                                                            <div class="es-resp">
-                                                                                <div class="visible-xl"
-                                                                                    style="height: 90px"></div>
-                                                                                <div class="hidden-xl hidden-md hidden-sm hidden-ms hidden-xs"
-                                                                                    style="height: 90px"></div>
-                                                                                <div class="visible-md"
-                                                                                    style="height: 90px"></div>
-                                                                                <div class="visible-sm"
-                                                                                    style="height: 90px"></div>
-                                                                                <div class="visible-ms"
-                                                                                    style="height: 0px"></div>
-                                                                                <div class="visible-xs"
-                                                                                    style="height: 0px"></div>
-                                                                            </div>
-                                                                            <div class="heading heading-large default align-center color-white subcolor-main transform-default icon-type-hidden heading-tag-h1"
-                                                                                id="like_sc_header_919820755">
-                                                                                <h1
-                                                                                    class="header -id-like_sc_header_9198207551447797974 -effect-fade_in -el-block -delay-0 -duration-1000 -sequences-0">
-                                                                                    Handcrafted <span> with Soul </span>
-                                                                                </h1>
-                                                                            </div>
-                                                                            <div class="ltx-content-width col-align-center"
-                                                                                id="like_sc_content_width_5984596"
-                                                                                style="max-width: 700px">
-                                                                                <div class="ltx-wrapper">
-                                                                                    <div
-                                                                                        class="wpb_text_column wpb_content_element">
-                                                                                        <div class="wpb_wrapper">
-                                                                                            <p
-                                                                                                style="text-align: center">
-                                                                                                Nulla imperdiet ultrices
-                                                                                                quam,
-                                                                                                et semper nibh fringilla
-                                                                                                in.
-                                                                                                Aenean a porttitor nisl,
-                                                                                                sed
-                                                                                                laoreet mauris.
-                                                                                                Pellentesque
-                                                                                                fermentum gravida massa,
-                                                                                                eu
-                                                                                                ultrices enim tincidunt
-                                                                                                id.
-                                                                                            </p>
-                                                                                        </div>
-                                                                                    </div>
-                                                                                </div>
-                                                                            </div>
-                                                                            <div class="es-resp">
-                                                                                <div class="visible-xl"
-                                                                                    style="height: 80px"></div>
-                                                                                <div class="hidden-xl hidden-md hidden-sm hidden-ms hidden-xs"
-                                                                                    style="height: 80px"></div>
-                                                                                <div class="visible-md"
-                                                                                    style="height: 80px"></div>
-                                                                                <div class="visible-sm"
-                                                                                    style="height: 80px"></div>
-                                                                                <div class="visible-ms"
-                                                                                    style="height: 80px"></div>
-                                                                                <div class="visible-xs"
-                                                                                    style="height: 80px"></div>
-                                                                            </div>
-                                                                            <div
-                                                                                class="btn-wrap align-center btn-wrap-inline">
-                                                                                <a href="shop/index.html"
-                                                                                    class="btn btn-main color-hover-white align-center"
-                                                                                    id="like_sc_button_331454817">Get
-                                                                                    beer</a>
-                                                                            </div>
-                                                                            <div class="es-resp">
-                                                                                <div class="visible-xl"
-                                                                                    style="height: 280px"></div>
-                                                                                <div class="hidden-xl hidden-md hidden-sm hidden-ms hidden-xs"
-                                                                                    style="height: 240px"></div>
-                                                                                <div class="visible-md"
-                                                                                    style="height: 240px"></div>
-                                                                                <div class="visible-sm"
-                                                                                    style="height: 240px"></div>
-                                                                                <div class="visible-ms"
-                                                                                    style="height: 240px"></div>
-                                                                                <div class="visible-xs"
-                                                                                    style="height: 240px"></div>
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <div class="ltx-zs-slider-inner ltx-zs-slide-4" data-index="4">
-                                                            <div
-                                                                class="vc_row wpb_row vc_row-fluid vc_row-o-content-middle vc_row-flex text-align-center">
-                                                                <div
-                                                                    class="wpb_column vc_column_container vc_col-sm-12">
-                                                                    <div class="vc_column-inner">
-                                                                        <div class="wpb_wrapper">
-                                                                            <div class="es-resp">
-                                                                                <div class="visible-xl"
-                                                                                    style="height: 90px"></div>
-                                                                                <div class="hidden-xl hidden-md hidden-sm hidden-ms hidden-xs"
-                                                                                    style="height: 90px"></div>
-                                                                                <div class="visible-md"
-                                                                                    style="height: 90px"></div>
-                                                                                <div class="visible-sm"
-                                                                                    style="height: 90px"></div>
-                                                                                <div class="visible-ms"
-                                                                                    style="height: 0px"></div>
-                                                                                <div class="visible-xs"
-                                                                                    style="height: 0px"></div>
-                                                                            </div>
-                                                                            <div class="heading heading-large default align-center color-white subcolor-main transform-default icon-type-hidden heading-tag-h1"
-                                                                                id="like_sc_header_23484766">
-                                                                                <h1
-                                                                                    class="header -id-like_sc_header_234847661325935735 -effect-fade_in -el-block -delay-0 -duration-1000 -sequences-0">
-                                                                                    Freedom <span> of taste </span>
-                                                                                </h1>
-                                                                            </div>
-                                                                            <div class="ltx-content-width col-align-center"
-                                                                                id="like_sc_content_width_939237838"
-                                                                                style="max-width: 700px">
-                                                                                <div class="ltx-wrapper">
-                                                                                    <div
-                                                                                        class="wpb_text_column wpb_content_element">
-                                                                                        <div class="wpb_wrapper">
-                                                                                            <p
-                                                                                                style="text-align: center">
-                                                                                                Nulla imperdiet ultrices
-                                                                                                quam,
-                                                                                                et semper nibh fringilla
-                                                                                                in.
-                                                                                                Aenean a porttitor nisl,
-                                                                                                sed
-                                                                                                laoreet mauris.
-                                                                                                Pellentesque
-                                                                                                fermentum gravida massa,
-                                                                                                eu
-                                                                                                ultrices enim tincidunt
-                                                                                                id.
-                                                                                            </p>
-                                                                                        </div>
-                                                                                    </div>
-                                                                                </div>
-                                                                            </div>
-                                                                            <div class="es-resp">
-                                                                                <div class="visible-xl"
-                                                                                    style="height: 80px"></div>
-                                                                                <div class="hidden-xl hidden-md hidden-sm hidden-ms hidden-xs"
-                                                                                    style="height: 80px"></div>
-                                                                                <div class="visible-md"
-                                                                                    style="height: 80px"></div>
-                                                                                <div class="visible-sm"
-                                                                                    style="height: 80px"></div>
-                                                                                <div class="visible-ms"
-                                                                                    style="height: 80px"></div>
-                                                                                <div class="visible-xs"
-                                                                                    style="height: 80px"></div>
-                                                                            </div>
-                                                                            <div
-                                                                                class="btn-wrap align-center btn-wrap-inline">
-                                                                                <a href="shop/index.html"
-                                                                                    class="btn btn-main color-hover-white align-center"
-                                                                                    id="like_sc_button_1168733420">Get
-                                                                                    beer</a>
-                                                                            </div>
-                                                                            <div class="es-resp">
-                                                                                <div class="visible-xl"
-                                                                                    style="height: 280px"></div>
-                                                                                <div class="hidden-xl hidden-md hidden-sm hidden-ms hidden-xs"
-                                                                                    style="height: 240px"></div>
-                                                                                <div class="visible-md"
-                                                                                    style="height: 240px"></div>
-                                                                                <div class="visible-sm"
-                                                                                    style="height: 240px"></div>
-                                                                                <div class="visible-ms"
-                                                                                    style="height: 240px"></div>
-                                                                                <div class="visible-xs"
-                                                                                    style="height: 240px"></div>
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
+                                                        @endforeach
                                                     </div>
                                                 </div>
                                             </div>
@@ -1077,12 +426,9 @@
                                                     </div>
                                                     <div class="heading theme-icon align-center color-white subcolor-main transform-default ltx-theme-header icon-type-default heading-tag-h2"
                                                         id="like_sc_header_170572688">
-                                                        <span
-                                                            class="ltx-theme-icon icon icon-left_wheat_new"></span><span
-                                                            class="last ltx-theme-icon icon icon-left_wheat_new"></span>
                                                         <h2
                                                             class="header ltx-sr-id-like_sc_header_17057268863277814 ltx-sr ltx-sr-effect-fade_in ltx-sr-el-block ltx-sr-delay-0 ltx-sr-duration-1000 ltx-sr-sequences-0">
-                                                            Why our beer is so good
+                                                            ¿Porque nuestros productos son buenos?
                                                         </h2>
                                                     </div>
                                                     <div class="es-resp">
@@ -1099,10 +445,12 @@
                                                         <li
                                                             class="col-lg-2 col-md-4 col-sm-4 col-ms-6 col-xs-6col-xs-12">
                                                             <div data-mh="ltx-block-icon-in-1637"
-                                                                class="in matchHeight">
-                                                                <span class="ltx-icon icon-wheat bg-transparent"
-                                                                    data-mh="ltx-icon-span-like_sc_block_icon_1968964920"></span>
-                                                                <h5 class="header">Selected Malts</h5>
+                                                                class="">
+
+                                                                <i
+                                                                    class="fa-solid fa-fish ltx-icon bg-transparent"></i>
+
+                                                                <h5 class="header">Fesh</h5>
                                                                 <div class="descr">
                                                                     Nulla imperdiet ultrices quam, et semper
                                                                     nibh fringilla porttitor nisl.
@@ -1112,9 +460,10 @@
                                                         <li
                                                             class="col-lg-2 col-md-4 col-sm-4 col-ms-6 col-xs-6col-xs-12">
                                                             <div data-mh="ltx-block-icon-in-1637"
-                                                                class="in matchHeight">
-                                                                <span class="ltx-icon icon-hop bg-transparent"
-                                                                    data-mh="ltx-icon-span-like_sc_block_icon_1968964920"></span>
+                                                                class="">
+                                                                <i
+                                                                    class="fa-solid fa-fish ltx-icon bg-transparent"></i>
+
                                                                 <h5 class="header">Quality Hops</h5>
                                                                 <div class="descr">
                                                                     Aenean a porttitor nisl, sed laoreet mauris.
@@ -1125,9 +474,10 @@
                                                         <li
                                                             class="col-lg-2 col-md-4 col-sm-4 col-ms-6 col-xs-6col-xs-12">
                                                             <div data-mh="ltx-block-icon-in-1637"
-                                                                class="in matchHeight">
-                                                                <span class="ltx-icon icon-water bg-transparent"
-                                                                    data-mh="ltx-icon-span-like_sc_block_icon_1968964920"></span>
+                                                                class="">
+                                                                <i
+                                                                    class="fa-solid fa-fish ltx-icon bg-transparent"></i>
+
                                                                 <h5 class="header">Special Water</h5>
                                                                 <div class="descr">
                                                                     Nulla imperdiet ultrices quam, et semper
@@ -1138,10 +488,10 @@
                                                         <li
                                                             class="col-lg-2 col-md-4 col-sm-4 col-ms-6 col-xs-6col-xs-12">
                                                             <div data-mh="ltx-block-icon-in-1637"
-                                                                class="in matchHeight">
-                                                                <span
-                                                                    class="ltx-icon icon-molecular-structure bg-transparent"
-                                                                    data-mh="ltx-icon-span-like_sc_block_icon_1968964920"></span>
+                                                                class="">
+                                                                <i
+                                                                    class="fa-solid fa-fish ltx-icon bg-transparent"></i>
+
                                                                 <h5 class="header">Unique Yeast</h5>
                                                                 <div class="descr">
                                                                     Aenean a porttitor nisl, sed laoreet mauris.
@@ -1152,9 +502,10 @@
                                                         <li
                                                             class="col-lg-2 col-md-4 col-sm-4 col-ms-6 col-xs-6col-xs-12">
                                                             <div data-mh="ltx-block-icon-in-1637"
-                                                                class="in matchHeight">
-                                                                <span class="ltx-icon icon-receipt bg-transparent"
-                                                                    data-mh="ltx-icon-span-like_sc_block_icon_1968964920"></span>
+                                                                class="">
+                                                                <i
+                                                                    class="fa-solid fa-fish ltx-icon bg-transparent"></i>
+
                                                                 <h5 class="header">Perennial Recipes</h5>
                                                                 <div class="descr">
                                                                     Nulla imperdiet ultrices quam, et semper
@@ -1165,9 +516,10 @@
                                                         <li
                                                             class="col-lg-2 col-md-4 col-sm-4 col-ms-6 col-xs-6col-xs-12">
                                                             <div data-mh="ltx-block-icon-in-1637"
-                                                                class="in matchHeight">
-                                                                <span class="ltx-icon icon-brewing bg-transparent"
-                                                                    data-mh="ltx-icon-span-like_sc_block_icon_1968964920"></span>
+                                                                class="">
+                                                                <i
+                                                                    class="fa-solid fa-fish ltx-icon bg-transparent"></i>
+
                                                                 <h5 class="header">Modern Equipment</h5>
                                                                 <div class="descr">
                                                                     Aenean a porttitor nisl, sed laoreet mauris.
@@ -1285,10 +637,10 @@
                                                         <li
                                                             class="col-lg-3 col-md-6 col-sm-6 col-ms-12 col-xs-12 ltx-icon-image">
                                                             <div data-mh="ltx-block-icon-in-1687"
-                                                                class="in matchHeight">
+                                                                class="">
                                                                 <span class="ltx-icon ltx-icon-image bg-transparent"
                                                                     data-mh="ltx-icon-span-like_sc_block_icon_1811525453"><img
-                                                                        src="uploads/2019/04/beer-icon-1.png"
+                                                                        width="120px" src="/storage/bread.png"
                                                                         class="ltx-icon-image"
                                                                         alt="Malt mashing" /></span>
                                                                 <h5 class="header">Malt mashing</h5>
@@ -1302,10 +654,10 @@
                                                         <li
                                                             class="col-lg-3 col-md-6 col-sm-6 col-ms-12 col-xs-12 ltx-icon-image">
                                                             <div data-mh="ltx-block-icon-in-1687"
-                                                                class="in matchHeight">
+                                                                class="">
                                                                 <span class="ltx-icon ltx-icon-image bg-transparent"
                                                                     data-mh="ltx-icon-span-like_sc_block_icon_1811525453"><img
-                                                                        src="uploads/2019/04/beer-icon-2.png"
+                                                                        width="120px" src="/storage/steak.png"
                                                                         class="ltx-icon-image"
                                                                         alt="Filtration and boiling" /></span>
                                                                 <h5 class="header">Filtration and boiling</h5>
@@ -1319,10 +671,10 @@
                                                         <li
                                                             class="col-lg-3 col-md-6 col-sm-6 col-ms-12 col-xs-12 ltx-icon-image">
                                                             <div data-mh="ltx-block-icon-in-1687"
-                                                                class="in matchHeight">
+                                                                class="">
                                                                 <span class="ltx-icon ltx-icon-image bg-transparent"
                                                                     data-mh="ltx-icon-span-like_sc_block_icon_1811525453"><img
-                                                                        src="uploads/2019/04/beer-icon-3.png"
+                                                                        width="120px" src="/storage/flour.png"
                                                                         class="ltx-icon-image"
                                                                         alt="Fermentation and cooling" /></span>
                                                                 <h5 class="header">
@@ -1338,10 +690,10 @@
                                                         <li
                                                             class="col-lg-3 col-md-6 col-sm-6 col-ms-12 col-xs-12 ltx-icon-image">
                                                             <div data-mh="ltx-block-icon-in-1687"
-                                                                class="in matchHeight">
+                                                                class="">
                                                                 <span class="ltx-icon ltx-icon-image bg-transparent"
                                                                     data-mh="ltx-icon-span-like_sc_block_icon_1811525453"><img
-                                                                        src="uploads/2019/04/beer-icon-4.png"
+                                                                        width="120px" src="/storage/plastic-bag.png"
                                                                         class="ltx-icon-image"
                                                                         alt="Filtration and bottling" /></span>
                                                                 <h5 class="header">
@@ -1379,16 +731,17 @@
                                                 <div class="wpb_wrapper">
                                                     <div class="heading heading-large header-subheader align-left color-main subcolor-white transform-default has-subheader theme-icon-second heading-icon-fa icon-type-default ltx-litres vc_custom_1617639640721 heading-tag-h2"
                                                         id="like_sc_header_1889704831">
-                                                        <span
-                                                            class="heading-icon-fa-wrap bg-transparent icon-barrel"></span>
+                                                        <i
+                                                            class="fa-solid fa-basket-shopping heading-icon-fa-wrap bg-transparent "></i>
                                                         <div class="heading-content">
+
                                                             <h5
                                                                 class="subheader ltx-sr-id-like_sc_header_1889704831845037626 ltx-sr ltx-sr-effect-fade_in ltx-sr-el-block ltx-sr-delay-100 ltx-sr-duration-300 ltx-sr-sequences-50">
-                                                                690
+                                                                +50
                                                             </h5>
                                                             <h2
                                                                 class="header ltx-sr-id-like_sc_header_1889704831173102461 ltx-sr ltx-sr-effect-fade_in ltx-sr-el-block ltx-sr-delay-0 ltx-sr-duration-1000 ltx-sr-sequences-0">
-                                                                litres/day
+                                                                AÑOS
                                                             </h2>
                                                         </div>
                                                     </div>
@@ -1410,7 +763,7 @@
                                                     <div class="wpb_text_column wpb_content_element">
                                                         <div class="wpb_wrapper">
                                                             <p>
-                                                                <strong class="text-lg">«Since 1987 our brewers
+                                                                <strong class="text-lg">«Desde 1952 our brewers
                                                                     have developed and
                                                                     improved the best recipes for
                                                                     <span class="color-main">craft beer</span>,
@@ -1438,7 +791,7 @@
                                                     <div class="btn-wrap">
                                                         <a href="shop/index.html"
                                                             class="btn btn-main color-hover-white vc_custom_1555327250689"
-                                                            id="like_sc_button_1494553654">Get beer</a>
+                                                            id="like_sc_button_1494553654">Ver Productos</a>
                                                     </div>
                                                 </div>
                                             </div>
@@ -1463,12 +816,12 @@
                                                     </div>
                                                     <div class="heading theme-icon align-center color-black subcolor-main transform-default ltx-theme-header icon-type-default vc_custom_1555269642770 heading-tag-h2"
                                                         id="like_sc_header_1146378276">
-                                                        <span
+                                                        {{-- <span
                                                             class="ltx-theme-icon icon icon-left_wheat_new"></span><span
-                                                            class="last ltx-theme-icon icon icon-left_wheat_new"></span>
+                                                            class="last ltx-theme-icon icon icon-left_wheat_new"></span> --}}
                                                         <h2
                                                             class="header ltx-sr-id-like_sc_header_1146378276183105364 ltx-sr ltx-sr-effect-fade_in ltx-sr-el-block ltx-sr-delay-0 ltx-sr-duration-1000 ltx-sr-sequences-0">
-                                                            Discover our beer
+                                                            Descubre Nuestra Mercaderia
                                                         </h2>
                                                     </div>
                                                     <div class="ltx-content-width col-align-center"
@@ -1477,11 +830,8 @@
                                                             <div class="wpb_text_column wpb_content_element">
                                                                 <div class="wpb_wrapper">
                                                                     <p style="text-align: center">
-                                                                        Nulla imperdiet ultrices quam, et semper
-                                                                        nibh fringilla in. Aenean a porttitor
-                                                                        nisl, sed laoreet mauris. Pellentesque
-                                                                        fermentum gravida massa, eu ultrices enim
-                                                                        tincidunt id.
+                                                                        Descripcion acerca de los productos Lorem ipsum
+                                                                        dolor sit amet consectetur, adipisicing elit.
                                                                     </p>
                                                                 </div>
                                                             </div>
@@ -1498,317 +848,54 @@
                                                     </div>
                                                     <div class="woocommerce swiper-container products-slider"
                                                         data-cols="4" data-autoplay="0">
+
                                                         <ul
                                                             class="swiper-wrapper products products-sc products-sc-short ltx-products-bg-white">
-                                                            <li id="post-8069"
-                                                                class="ltx-products-hide-price swiper-slide post-8069 product type-product status-publish has-post-thumbnail product_cat-20-liter-kegs product_cat-beer-cans product_cat-bottled-beer product_cat-craft-beer product_tag-wheat first instock shipping-taxable purchasable product-type-simple">
-                                                                <div class="item" data-mh="ltx-wc-item">
-                                                                    <div class="image">
-                                                                        <img width="360" height="963"
-                                                                            src="uploads/2018/02/beer_02-360x963.png"
-                                                                            class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail"
-                                                                            alt="" srcset="
-                                          http://weisber.like-themes.com/wp-content/uploads/2018/02/beer_02-360x963.png  360w,
-                                          http://weisber.like-themes.com/wp-content/uploads/2018/02/beer_02-112x300.png  112w,
-                                          http://weisber.like-themes.com/wp-content/uploads/2018/02/beer_02-768x2055.png 768w,
-                                          http://weisber.like-themes.com/wp-content/uploads/2018/02/beer_02-383x1024.png 383w,
-                                          http://weisber.like-themes.com/wp-content/uploads/2018/02/beer_02-600x1606.png 600w,
-                                          http://weisber.like-themes.com/wp-content/uploads/2018/02/beer_02-206x550.png  206w,
-                                          http://weisber.like-themes.com/wp-content/uploads/2018/02/beer_02.png          812w
-                                        " sizes="(max-width: 360px) 100vw, 360px" />
-                                                                    </div>
-                                                                    <a href="product/mild-lager-beer/index.html">
-                                                                        <h2 class="woocommerce-loop-product__title">
-                                                                            Mild Lager Beer
-                                                                        </h2>
-                                                                    </a>
-                                                                    <div class="post_content entry-content">
-                                                                        ABV 6,5% | IBU 60 | OG 1.104
-                                                                    </div>
-                                                                    <span class="price"><span
-                                                                            class="woocommerce-Price-amount amount"><span
-                                                                                class="woocommerce-Price-currencySymbol">&#36;</span>39.00</span></span>
-                                                                    <a href="indexd002.html?add-to-cart=8069"
-                                                                        data-quantity="1"
-                                                                        class="button product_type_simple add_to_cart_button ajax_add_to_cart"
-                                                                        data-product_id="8069" data-product_sku=""
-                                                                        aria-label="Add &ldquo;Mild Lager Beer&rdquo; to your cart"
-                                                                        rel="nofollow">Add to cart</a>
-                                                                </div>
-                                                            </li>
-                                                            <li id="post-8070"
-                                                                class="ltx-products-hide-price swiper-slide post-8070 product type-product status-publish has-post-thumbnail product_cat-20-liter-kegs product_cat-beer-cans product_cat-bottled-beer product_cat-craft-beer product_tag-wheat instock shipping-taxable purchasable product-type-simple">
-                                                                <div class="item" data-mh="ltx-wc-item">
-                                                                    <div class="image">
-                                                                        <img width="360" height="963"
-                                                                            src="uploads/2018/02/beer_03-360x963.png"
-                                                                            class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail"
-                                                                            alt="" srcset="
-                                          http://weisber.like-themes.com/wp-content/uploads/2018/02/beer_03-360x963.png  360w,
-                                          http://weisber.like-themes.com/wp-content/uploads/2018/02/beer_03-112x300.png  112w,
-                                          http://weisber.like-themes.com/wp-content/uploads/2018/02/beer_03-768x2055.png 768w,
-                                          http://weisber.like-themes.com/wp-content/uploads/2018/02/beer_03-383x1024.png 383w,
-                                          http://weisber.like-themes.com/wp-content/uploads/2018/02/beer_03-600x1606.png 600w,
-                                          http://weisber.like-themes.com/wp-content/uploads/2018/02/beer_03-206x550.png  206w,
-                                          http://weisber.like-themes.com/wp-content/uploads/2018/02/beer_03.png          812w
-                                        " sizes="(max-width: 360px) 100vw, 360px" />
-                                                                    </div>
-                                                                    <a href="product/golden-beer/index.html">
-                                                                        <h2 class="woocommerce-loop-product__title">
-                                                                            Golden Beer
-                                                                        </h2>
-                                                                    </a>
-                                                                    <div class="post_content entry-content">
-                                                                        ABV 6,5% | IBU 60 | OG 1.104
-                                                                    </div>
-                                                                    <span class="price"><span
-                                                                            class="woocommerce-Price-amount amount"><span
-                                                                                class="woocommerce-Price-currencySymbol">&#36;</span>19.00</span></span>
-                                                                    <a href="index68b9.html?add-to-cart=8070"
-                                                                        data-quantity="1"
-                                                                        class="button product_type_simple add_to_cart_button ajax_add_to_cart"
-                                                                        data-product_id="8070" data-product_sku=""
-                                                                        aria-label="Add &ldquo;Golden Beer&rdquo; to your cart"
-                                                                        rel="nofollow">Add to cart</a>
-                                                                </div>
-                                                            </li>
-                                                            <li id="post-8071"
-                                                                class="ltx-products-hide-price swiper-slide post-8071 product type-product status-publish has-post-thumbnail product_cat-20-liter-kegs product_cat-beer-cans product_cat-bottled-beer product_cat-craft-beer product_tag-craft product_tag-flights product_tag-hop product_tag-wheat last instock sale shipping-taxable purchasable product-type-simple">
-                                                                <div class="item" data-mh="ltx-wc-item">
-                                                                    <div class="image">
-                                                                        <span class="onsale">Sale</span>
-                                                                        <img width="360" height="963"
-                                                                            src="uploads/2018/02/beer_04-360x963.png"
-                                                                            class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail"
-                                                                            alt="" srcset="
-                                          http://weisber.like-themes.com/wp-content/uploads/2018/02/beer_04-360x963.png  360w,
-                                          http://weisber.like-themes.com/wp-content/uploads/2018/02/beer_04-112x300.png  112w,
-                                          http://weisber.like-themes.com/wp-content/uploads/2018/02/beer_04-768x2055.png 768w,
-                                          http://weisber.like-themes.com/wp-content/uploads/2018/02/beer_04-383x1024.png 383w,
-                                          http://weisber.like-themes.com/wp-content/uploads/2018/02/beer_04-600x1606.png 600w,
-                                          http://weisber.like-themes.com/wp-content/uploads/2018/02/beer_04-206x550.png  206w,
-                                          http://weisber.like-themes.com/wp-content/uploads/2018/02/beer_04.png          812w
-                                        " sizes="(max-width: 360px) 100vw, 360px" />
-                                                                    </div>
-                                                                    <a href="product/premium-beer/index.html">
-                                                                        <h2 class="woocommerce-loop-product__title">
-                                                                            Premium Beer
-                                                                        </h2>
-                                                                    </a>
-                                                                    <div class="post_content entry-content">
-                                                                        ABV 6,5% | IBU 60 | OG 1.104
-                                                                    </div>
-                                                                    <span class="price"><del><span
+                                                            @foreach ($productos as $producto)
+                                                                <li id="post-8069"
+                                                                    class="ltx-products-hide-price swiper-slide post-8069 product type-product status-publish has-post-thumbnail product_cat-20-liter-kegs product_cat-beer-cans product_cat-bottled-beer product_cat-craft-beer product_tag-wheat first instock shipping-taxable purchasable product-type-simple">
+                                                                    <div class="item" data-mh="ltx-wc-item">
+                                                                        <div class="image">
+                                                                            <img width="360" height="963"
+                                                                                src="/storage/{{ $producto->imagen }}"
+                                                                                class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail"
+                                                                                alt="" srcset="
+                                                                            /storage/{{ $producto->imagen }} 360w,
+                                                                            /storage/{{ $producto->imagen }} 112w,
+                                                                            /storage/{{ $producto->imagen }} 768w,
+                                                                            /storage/{{ $producto->imagen }} 383w,
+                                                                            /storage/{{ $producto->imagen }} 600w,
+                                                                            /storage/{{ $producto->imagen }} 206w,
+                                                                            /storage/{{ $producto->imagen }} 812w
+                                                                          " sizes="(max-width: 360px) 100vw, 360px" />
+                                                                        </div>
+                                                                        <a href="producto/{{ $producto->id }}">
+                                                                            <h2
+                                                                                class="woocommerce-loop-product__title">
+                                                                                {{ $producto->producto_nombre }}
+                                                                                ${{ $producto->precio }}
+                                                                            </h2>
+                                                                        </a>
+                                                                        <div class="post_content entry-content">
+                                                                            {{ $producto->categoria->nombre }}
+                                                                        </div>
+                                                                        <span class="price"><span
                                                                                 class="woocommerce-Price-amount amount"><span
-                                                                                    class="woocommerce-Price-currencySymbol">&#36;</span>40.00</span></del>
-                                                                        <ins><span
-                                                                                class="woocommerce-Price-amount amount"><span
-                                                                                    class="woocommerce-Price-currencySymbol">&#36;</span>39.00</span></ins></span>
-                                                                    <a href="index4522.html?add-to-cart=8071"
-                                                                        data-quantity="1"
-                                                                        class="button product_type_simple add_to_cart_button ajax_add_to_cart"
-                                                                        data-product_id="8071" data-product_sku=""
-                                                                        aria-label="Add &ldquo;Premium Beer&rdquo; to your cart"
-                                                                        rel="nofollow">Add to cart</a>
-                                                                </div>
-                                                            </li>
-                                                            <li id="post-8072"
-                                                                class="ltx-products-hide-price swiper-slide post-8072 product type-product status-publish has-post-thumbnail product_cat-20-liter-kegs product_cat-beer-cans product_cat-bottled-beer product_cat-craft-beer product_tag-craft product_tag-flights product_tag-hop product_tag-wheat first instock sale shipping-taxable purchasable product-type-simple">
-                                                                <div class="item" data-mh="ltx-wc-item">
-                                                                    <div class="image">
-                                                                        <span class="onsale">Sale</span>
-                                                                        <img width="360" height="963"
-                                                                            src="uploads/2018/02/beer_05-360x963.png"
-                                                                            class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail"
-                                                                            alt="" srcset="
-                                          http://weisber.like-themes.com/wp-content/uploads/2018/02/beer_05-360x963.png  360w,
-                                          http://weisber.like-themes.com/wp-content/uploads/2018/02/beer_05-112x300.png  112w,
-                                          http://weisber.like-themes.com/wp-content/uploads/2018/02/beer_05-768x2055.png 768w,
-                                          http://weisber.like-themes.com/wp-content/uploads/2018/02/beer_05-383x1024.png 383w,
-                                          http://weisber.like-themes.com/wp-content/uploads/2018/02/beer_05-600x1606.png 600w,
-                                          http://weisber.like-themes.com/wp-content/uploads/2018/02/beer_05-206x550.png  206w,
-                                          http://weisber.like-themes.com/wp-content/uploads/2018/02/beer_05.png          812w
-                                        " sizes="(max-width: 360px) 100vw, 360px" />
+                                                                                    class="woocommerce-Price-currencySymbol">&#36;</span>39.00</span></span>
+
                                                                     </div>
-                                                                    <a href="product/craft-beer/index.html">
-                                                                        <h2 class="woocommerce-loop-product__title">
-                                                                            Craft Beer
-                                                                        </h2>
-                                                                    </a>
-                                                                    <div class="post_content entry-content">
-                                                                        ABV 6,5% | IBU 60 | OG 1.104
-                                                                    </div>
-                                                                    <span class="price"><del><span
-                                                                                class="woocommerce-Price-amount amount"><span
-                                                                                    class="woocommerce-Price-currencySymbol">&#36;</span>49.00</span></del>
-                                                                        <ins><span
-                                                                                class="woocommerce-Price-amount amount"><span
-                                                                                    class="woocommerce-Price-currencySymbol">&#36;</span>19.00</span></ins></span>
-                                                                    <a href="indexf207.html?add-to-cart=8072"
-                                                                        data-quantity="1"
-                                                                        class="button product_type_simple add_to_cart_button ajax_add_to_cart"
-                                                                        data-product_id="8072" data-product_sku=""
-                                                                        aria-label="Add &ldquo;Craft Beer&rdquo; to your cart"
-                                                                        rel="nofollow">Add to cart</a>
-                                                                </div>
-                                                            </li>
-                                                            <li id="post-8073"
-                                                                class="ltx-products-hide-price swiper-slide post-8073 product type-product status-publish has-post-thumbnail product_cat-20-liter-kegs product_cat-beer-cans product_cat-craft-beer product_tag-wheat instock sale shipping-taxable purchasable product-type-simple">
-                                                                <div class="item" data-mh="ltx-wc-item">
-                                                                    <div class="image">
-                                                                        <span class="onsale">Sale</span>
-                                                                        <img width="360" height="963"
-                                                                            src="uploads/2018/02/beer_06-360x963.png"
-                                                                            class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail"
-                                                                            alt="" srcset="
-                                          http://weisber.like-themes.com/wp-content/uploads/2018/02/beer_06-360x963.png  360w,
-                                          http://weisber.like-themes.com/wp-content/uploads/2018/02/beer_06-112x300.png  112w,
-                                          http://weisber.like-themes.com/wp-content/uploads/2018/02/beer_06-768x2055.png 768w,
-                                          http://weisber.like-themes.com/wp-content/uploads/2018/02/beer_06-383x1024.png 383w,
-                                          http://weisber.like-themes.com/wp-content/uploads/2018/02/beer_06-600x1606.png 600w,
-                                          http://weisber.like-themes.com/wp-content/uploads/2018/02/beer_06-206x550.png  206w,
-                                          http://weisber.like-themes.com/wp-content/uploads/2018/02/beer_06.png          812w
-                                        " sizes="(max-width: 360px) 100vw, 360px" />
-                                                                    </div>
-                                                                    <a href="product/mild-weiss-beer/index.html">
-                                                                        <h2 class="woocommerce-loop-product__title">
-                                                                            Mild Weiss Beer
-                                                                        </h2>
-                                                                    </a>
-                                                                    <div class="post_content entry-content">
-                                                                        ABV 6,5% | IBU 60 | OG 1.104
-                                                                    </div>
-                                                                    <span class="price"><del><span
-                                                                                class="woocommerce-Price-amount amount"><span
-                                                                                    class="woocommerce-Price-currencySymbol">&#36;</span>29.00</span></del>
-                                                                        <ins><span
-                                                                                class="woocommerce-Price-amount amount"><span
-                                                                                    class="woocommerce-Price-currencySymbol">&#36;</span>19.00</span></ins></span>
-                                                                    <a href="index3766.html?add-to-cart=8073"
-                                                                        data-quantity="1"
-                                                                        class="button product_type_simple add_to_cart_button ajax_add_to_cart"
-                                                                        data-product_id="8073" data-product_sku=""
-                                                                        aria-label="Add &ldquo;Mild Weiss Beer&rdquo; to your cart"
-                                                                        rel="nofollow">Add to cart</a>
-                                                                </div>
-                                                            </li>
-                                                            <li id="post-8074"
-                                                                class="ltx-products-hide-price swiper-slide post-8074 product type-product status-publish has-post-thumbnail product_cat-20-liter-kegs product_cat-beer-cans product_cat-bottled-beer product_cat-craft-beer product_tag-wheat last instock shipping-taxable purchasable product-type-simple">
-                                                                <div class="item" data-mh="ltx-wc-item">
-                                                                    <div class="image">
-                                                                        <img width="360" height="963"
-                                                                            src="uploads/2018/02/beer_07-360x963.png"
-                                                                            class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail"
-                                                                            alt="" srcset="
-                                          http://weisber.like-themes.com/wp-content/uploads/2018/02/beer_07-360x963.png  360w,
-                                          http://weisber.like-themes.com/wp-content/uploads/2018/02/beer_07-112x300.png  112w,
-                                          http://weisber.like-themes.com/wp-content/uploads/2018/02/beer_07-768x2055.png 768w,
-                                          http://weisber.like-themes.com/wp-content/uploads/2018/02/beer_07-383x1024.png 383w,
-                                          http://weisber.like-themes.com/wp-content/uploads/2018/02/beer_07-600x1606.png 600w,
-                                          http://weisber.like-themes.com/wp-content/uploads/2018/02/beer_07-206x550.png  206w,
-                                          http://weisber.like-themes.com/wp-content/uploads/2018/02/beer_07.png          812w
-                                        " sizes="(max-width: 360px) 100vw, 360px" />
-                                                                    </div>
-                                                                    <a href="product/premium-beer-2/index.html">
-                                                                        <h2 class="woocommerce-loop-product__title">
-                                                                            Premium Beer
-                                                                        </h2>
-                                                                    </a>
-                                                                    <div class="post_content entry-content">
-                                                                        ABV 6,5% | IBU 60 | OG 1.104
-                                                                    </div>
-                                                                    <span class="price"><span
-                                                                            class="woocommerce-Price-amount amount"><span
-                                                                                class="woocommerce-Price-currencySymbol">&#36;</span>19.00</span></span>
-                                                                    <a href="index8d9d.html?add-to-cart=8074"
-                                                                        data-quantity="1"
-                                                                        class="button product_type_simple add_to_cart_button ajax_add_to_cart"
-                                                                        data-product_id="8074" data-product_sku=""
-                                                                        aria-label="Add &ldquo;Premium Beer&rdquo; to your cart"
-                                                                        rel="nofollow">Add to cart</a>
-                                                                </div>
-                                                            </li>
-                                                            <li id="post-8075"
-                                                                class="ltx-products-hide-price swiper-slide post-8075 product type-product status-publish has-post-thumbnail product_cat-20-liter-kegs product_cat-beer-cans product_cat-bottled-beer product_cat-craft-beer product_tag-wheat first instock shipping-taxable purchasable product-type-simple">
-                                                                <div class="item" data-mh="ltx-wc-item">
-                                                                    <div class="image">
-                                                                        <img width="360" height="963"
-                                                                            src="uploads/2018/02/beer_08-360x963.png"
-                                                                            class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail"
-                                                                            alt="" srcset="
-                                          http://weisber.like-themes.com/wp-content/uploads/2018/02/beer_08-360x963.png  360w,
-                                          http://weisber.like-themes.com/wp-content/uploads/2018/02/beer_08-112x300.png  112w,
-                                          http://weisber.like-themes.com/wp-content/uploads/2018/02/beer_08-768x2055.png 768w,
-                                          http://weisber.like-themes.com/wp-content/uploads/2018/02/beer_08-383x1024.png 383w,
-                                          http://weisber.like-themes.com/wp-content/uploads/2018/02/beer_08-600x1606.png 600w,
-                                          http://weisber.like-themes.com/wp-content/uploads/2018/02/beer_08-206x550.png  206w,
-                                          http://weisber.like-themes.com/wp-content/uploads/2018/02/beer_08.png          812w
-                                        " sizes="(max-width: 360px) 100vw, 360px" />
-                                                                    </div>
-                                                                    <a href="product/england-knigts/index.html">
-                                                                        <h2 class="woocommerce-loop-product__title">
-                                                                            England Knigts
-                                                                        </h2>
-                                                                    </a>
-                                                                    <div class="post_content entry-content">
-                                                                        ABV 6,5% | IBU 60 | OG 1.104
-                                                                    </div>
-                                                                    <span class="price"><span
-                                                                            class="woocommerce-Price-amount amount"><span
-                                                                                class="woocommerce-Price-currencySymbol">&#36;</span>19.00</span></span>
-                                                                    <a href="indexccbf.html?add-to-cart=8075"
-                                                                        data-quantity="1"
-                                                                        class="button product_type_simple add_to_cart_button ajax_add_to_cart"
-                                                                        data-product_id="8075" data-product_sku=""
-                                                                        aria-label="Add &ldquo;England Knigts&rdquo; to your cart"
-                                                                        rel="nofollow">Add to cart</a>
-                                                                </div>
-                                                            </li>
-                                                            <li id="post-8068"
-                                                                class="ltx-products-hide-price swiper-slide post-8068 product type-product status-publish has-post-thumbnail product_cat-beer-cans product_cat-bottled-beer product_cat-craft-beer product_tag-craft product_tag-wheat instock sale featured shipping-taxable purchasable product-type-simple">
-                                                                <div class="item" data-mh="ltx-wc-item">
-                                                                    <div class="image">
-                                                                        <span class="onsale">Sale</span>
-                                                                        <img width="360" height="963"
-                                                                            src="uploads/2018/02/beer_01-360x963.png"
-                                                                            class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail"
-                                                                            alt="" srcset="
-                                          http://weisber.like-themes.com/wp-content/uploads/2018/02/beer_01-360x963.png  360w,
-                                          http://weisber.like-themes.com/wp-content/uploads/2018/02/beer_01-112x300.png  112w,
-                                          http://weisber.like-themes.com/wp-content/uploads/2018/02/beer_01-768x2055.png 768w,
-                                          http://weisber.like-themes.com/wp-content/uploads/2018/02/beer_01-383x1024.png 383w,
-                                          http://weisber.like-themes.com/wp-content/uploads/2018/02/beer_01-600x1606.png 600w,
-                                          http://weisber.like-themes.com/wp-content/uploads/2018/02/beer_01-206x550.png  206w,
-                                          http://weisber.like-themes.com/wp-content/uploads/2018/02/beer_01.png          812w
-                                        " sizes="(max-width: 360px) 100vw, 360px" />
-                                                                    </div>
-                                                                    <a href="product/lager-beer-2/index.html">
-                                                                        <h2 class="woocommerce-loop-product__title">
-                                                                            Lager Beer
-                                                                        </h2>
-                                                                    </a>
-                                                                    <div class="post_content entry-content">
-                                                                        ABV 6,5% | IBU 60 | OG 1.104
-                                                                    </div>
-                                                                    <span class="price"><del><span
-                                                                                class="woocommerce-Price-amount amount"><span
-                                                                                    class="woocommerce-Price-currencySymbol">&#36;</span>19.00</span></del>
-                                                                        <ins><span
-                                                                                class="woocommerce-Price-amount amount"><span
-                                                                                    class="woocommerce-Price-currencySymbol">&#36;</span>14.00</span></ins></span>
-                                                                    <a href="indexa9ca.html?add-to-cart=8068"
-                                                                        data-quantity="1"
-                                                                        class="button product_type_simple add_to_cart_button ajax_add_to_cart"
-                                                                        data-product_id="8068" data-product_sku=""
-                                                                        aria-label="Add &ldquo;Lager Beer&rdquo; to your cart"
-                                                                        rel="nofollow">Add to cart</a>
-                                                                </div>
-                                                            </li>
+                                                                </li>
+                                                            @endforeach
+
+
+
                                                         </ul>
-                                                        <div class="arrows">
-                                                            <a href="#" class="arrow-left"></a>
-                                                            <a href="#" class="arrow-right"></a>
-                                                        </div>
+                                                        {{-- <div class="arrows">
+                                                            <a href="#" class=""><i
+                                                                    class="fa fa-arrow-right"></i></a>
+                                                            <a href="#" class=""><i
+                                                                    class="fa fa-arrow-right"></i></a>
+                                                        </div> --}}
                                                     </div>
                                                     <div class="es-resp">
                                                         <div class="visible-xl" style="height: 50px"></div>
@@ -1825,7 +912,7 @@
                                     </div>
                                 </section>
                                 <div class="vc_row-full-width vc_clearfix"></div>
-                                <section data-vc-full-width="true" data-vc-full-width-init="false"
+                                {{-- <section data-vc-full-width="true" data-vc-full-width-init="false"
                                     data-vc-stretch-content="true"
                                     class="vc_section bg-pos-right-top text-align-center-sm-ms">
                                     <div
@@ -1919,7 +1006,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                </section>
+                                </section> --}}
                                 <div class="vc_row-full-width vc_clearfix"></div>
                                 <section data-vc-full-width="true" data-vc-full-width-init="false"
                                     class="vc_section bg-pos-right-top">
@@ -1938,12 +1025,9 @@
                                                     </div>
                                                     <div class="heading theme-icon align-left color-black subcolor-main transform-default ltx-theme-header icon-type-default heading-tag-h2"
                                                         id="like_sc_header_862977426">
-                                                        <span
-                                                            class="ltx-theme-icon icon icon-left_wheat_new"></span><span
-                                                            class="last ltx-theme-icon icon icon-left_wheat_new"></span>
                                                         <h2
                                                             class="header ltx-sr-id-like_sc_header_8629774261436928008 ltx-sr ltx-sr-effect-fade_in ltx-sr-el-block ltx-sr-delay-0 ltx-sr-duration-1000 ltx-sr-sequences-0">
-                                                            Where to buy
+                                                            Donde Estamos Ubicados
                                                         </h2>
                                                     </div>
                                                     <div class="ltx-content-width col-align-center"
@@ -1980,14 +1064,14 @@
                                                                     <div class="locations-item item center-flex">
                                                                         <a href="#">
                                                                             <span class="photo"><img
-                                                                                    src="uploads/2018/02/location-1.png"
+                                                                                    width="80px"
+                                                                                    src="/storage/{{ $informacion->logo }}"
                                                                                     class="image"
-                                                                                    alt="Beer House" /></span>
-                                                                            <h5>Beer House</h5>
-                                                                            <span
-                                                                                class="descr">Goldschmidtstraße
+                                                                                    alt="La Sorpresa Store" /></span>
+                                                                            <h5>La Sorpresa Store</h5>
+                                                                            <span class="descr">
                                                                                 13, 04103 Leipzig
-                                                                                +49387-10-387</span>
+                                                                                {{ $informacion->telefono }}</span>
                                                                         </a>
                                                                     </div>
                                                                 </div>
@@ -2100,10 +1184,12 @@
                                                                     </div>
                                                                 </div>
                                                             </div>
-                                                            <div class="arrows">
-                                                                <a href="#" class="arrow-left"></a>
-                                                                <a href="#" class="arrow-right"></a>
-                                                            </div>
+                                                            {{-- <div class="arrows">
+                                                                <a href="#" class=""><i
+                                                                        class="fa fa-arrow-right"></i></a>
+                                                                <a href="#" class=""><i
+                                                                        class="fa fa-arrow-right"></i></a>
+                                                            </div> --}}
                                                         </div>
                                                     </div>
                                                     <div class="es-resp">
@@ -2121,7 +1207,7 @@
                                     </div>
                                 </section>
                                 <div class="vc_row-full-width vc_clearfix"></div>
-                                <section data-vc-full-width="true" data-vc-full-width-init="false"
+                                {{-- <section data-vc-full-width="true" data-vc-full-width-init="false"
                                     class="vc_section ltx-video vc_custom_1574021991555 vc_section-has-fill bg-color-black ltx-overlay bg-overlay-black bg-parallax ltx-bg-parallax-enabled ltx-bg-parallax-value-0.2">
                                     <div class="vc_row wpb_row vc_row-fluid">
                                         <div class="wpb_column vc_column_container vc_col-sm-12">
@@ -2138,12 +1224,9 @@
                                                     </div>
                                                     <div class="heading theme-icon align-center color-white subcolor-main transform-default ltx-theme-header icon-type-default vc_custom_1555270781833 heading-tag-h2"
                                                         id="like_sc_header_1611737627">
-                                                        <span
-                                                            class="ltx-theme-icon icon icon-left_wheat_new"></span><span
-                                                            class="last ltx-theme-icon icon icon-left_wheat_new"></span>
                                                         <h2
                                                             class="header ltx-sr-id-like_sc_header_16117376271851919860 ltx-sr ltx-sr-effect-fade_in ltx-sr-el-block ltx-sr-delay-0 ltx-sr-duration-1000 ltx-sr-sequences-0">
-                                                            What our clients say
+                                                            Las opiniones de nuestros clientes
                                                         </h2>
                                                     </div>
                                                     <div class="es-resp">
@@ -2163,41 +1246,36 @@
                                                                 <div class="inner matchHeight">
                                                                     <div class="text">
                                                                         <p>
-                                                                            Nullam orci dui, dictum et magna
-                                                                            sollicitudin, tempor blandit erat.
-                                                                            Maecenas suscipit tellus sit amet augue
-                                                                            placerat fringilla a id lacus. Morbi
-                                                                            viverra volutpat ex, id pellentesque
-                                                                            felis volutpat eu. Etiam mattis laoreet
-                                                                            leo sed accumsan. Fusce tincidunt in leo
-                                                                            lacinia condimentum.
+                                                                            {{ $testimonio->descripcion }}
                                                                         </p>
                                                                     </div>
                                                                     <div class="author">
                                                                         <div class="image">
                                                                             <img width="50" height="50"
-                                                                                src="uploads/2018/02/01-50x50.jpg"
+                                                                                src="/storage/{{ $testimonio->imagen }}"
                                                                                 class="attachment-weisber-tiny-square size-weisber-tiny-square wp-post-image"
                                                                                 alt="" srcset="
-                                            http://weisber.like-themes.com/wp-content/uploads/2018/02/01-50x50.jpg    50w,
-                                            http://weisber.like-themes.com/wp-content/uploads/2018/02/01-150x150.jpg 150w,
-                                            http://weisber.like-themes.com/wp-content/uploads/2018/02/01-300x300.jpg 300w,
-                                            http://weisber.like-themes.com/wp-content/uploads/2018/02/01-768x768.jpg 768w,
-                                            http://weisber.like-themes.com/wp-content/uploads/2018/02/01-360x360.jpg 360w,
-                                            http://weisber.like-themes.com/wp-content/uploads/2018/02/01-600x600.jpg 600w,
-                                            http://weisber.like-themes.com/wp-content/uploads/2018/02/01-100x100.jpg 100w,
-                                            http://weisber.like-themes.com/wp-content/uploads/2018/02/01-24x24.jpg    24w,
-                                            http://weisber.like-themes.com/wp-content/uploads/2018/02/01-48x48.jpg    48w,
-                                            http://weisber.like-themes.com/wp-content/uploads/2018/02/01-96x96.jpg    96w,
-                                            http://weisber.like-themes.com/wp-content/uploads/2018/02/01-364x364.jpg 364w,
-                                            http://weisber.like-themes.com/wp-content/uploads/2018/02/01-110x110.jpg 110w,
-                                            http://weisber.like-themes.com/wp-content/uploads/2018/02/01-275x275.jpg 275w,
-                                            http://weisber.like-themes.com/wp-content/uploads/2018/02/01-480x480.jpg 480w,
-                                            http://weisber.like-themes.com/wp-content/uploads/2018/02/01-550x550.jpg 550w,
-                                            http://weisber.like-themes.com/wp-content/uploads/2018/02/01.jpg         952w
-                                          " sizes="(max-width: 50px) 100vw, 50px" />
+                                                                                  /storage/{{ $testimonio->imagen }} 50w,
+                                                                                  /storage/{{ $testimonio->imagen }} 150w,
+                                                                                  /storage/{{ $testimonio->imagen }} 300w,
+                                                                                  /storage/{{ $testimonio->imagen }} 768w,
+                                                                                  /storage/{{ $testimonio->imagen }} 360w,
+                                                                                  /storage/{{ $testimonio->imagen }} 600w,
+                                                                                  /storage/{{ $testimonio->imagen }} 100w,
+                                                                                  /storage/{{ $testimonio->imagen }} 24w,
+                                                                                  /storage/{{ $testimonio->imagen }} 48w,
+                                                                                  /storage/{{ $testimonio->imagen }} 96w,
+                                                                                  /storage/{{ $testimonio->imagen }} 364w,
+                                                                                  /storage/{{ $testimonio->imagen }} 110w,
+                                                                                  /storage/{{ $testimonio->imagen }} 275w,
+                                                                                  /storage/{{ $testimonio->imagen }} 480w,
+                                                                                  /storage/{{ $testimonio->imagen }} 550w,
+                                                                                  /storage/{{ $testimonio->imagen }} 952w
+                                                                                "
+                                                                                sizes="(max-width: 50px) 100vw, 50px" />
                                                                         </div>
-                                                                        <div class="header">Patric Stone</div>
+                                                                        <div class="header">
+                                                                            {{ $testimonio->title }}</div>
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -2371,10 +1449,7 @@
                                                                 </div>
                                                             </div>
                                                         </div>
-                                                        <div class="arrows">
-                                                            <a href="#" class="arrow-left fa fa-chevron-left"></a>
-                                                            <a href="#" class="arrow-right fa fa-chevron-right"></a>
-                                                        </div>
+
                                                     </div>
                                                     <div class="es-resp">
                                                         <div class="visible-xl" style="height: 32px"></div>
@@ -2389,9 +1464,9 @@
                                             </div>
                                         </div>
                                     </div>
-                                </section>
-                                <div class="vc_row-full-width vc_clearfix"></div>
-                                <section data-vc-full-width="true" data-vc-full-width-init="false"
+                                </section> --}}
+                                {{-- <div class="vc_row-full-width vc_clearfix"></div> --}}
+                                {{-- <section data-vc-full-width="true" data-vc-full-width-init="false"
                                     class="vc_section vc_custom_1555274866754 bg-color-second text-align-center-sm-ms">
                                     <div
                                         class="vc_row wpb_row vc_row-fluid vc_custom_1555324969785 vc_row-o-content-middle vc_row-flex">
@@ -2470,8 +1545,8 @@
                                         </div>
                                     </div>
                                 </section>
-                                <div class="vc_row-full-width vc_clearfix"></div>
-                                <section data-vc-full-width="true" data-vc-full-width-init="false"
+                                <div class="vc_row-full-width vc_clearfix"></div> --}}
+                                {{-- <section data-vc-full-width="true" data-vc-full-width-init="false"
                                     class="vc_section vc_custom_1548798469212 ltx-sr ltx-sr-effect-fade_in ltx-sr-id-730446286 ltx-sr-el-items ltx-sr-delay-200 ltx-sr-duration-500 ltx-sr-sequences-200">
                                     <div class="vc_row wpb_row vc_row-fluid">
                                         <div class="wpb_column vc_column_container vc_col-sm-12">
@@ -2635,7 +1710,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                </section>
+                                </section> --}}
                                 <div class="vc_row-full-width vc_clearfix"></div>
                             </div>
                         </article>
@@ -2650,10 +1725,10 @@
                 <div class="row">
                     <div class="col-lg-4 col-md-6 col-sm-12 col-ms-12 hidden-xs hidden-ms hidden-sm clearfix">
                         <div class="footer-widget-area">
-                            <a class="logo" href="index.html"><img
-                                    src="uploads/2018/02/logo_white_1x-1.png" alt="Weisber" srcset="
-                      //weisber.like-themes.com/wp-content/uploads/2018/02/logo_white_1x-1.png 1x,
-                      //weisber.like-themes.com/wp-content/uploads/2018/02/logo_white_2x-1.png 2x
+                            <a class="logo" href="/"><img src="/storage/{{ $informacion->logo }}"
+                                    width="150px" alt="Weisber" srcset="
+                                    /storage/{{ $informacion->logo }} 1x,
+                                    /storage/{{ $informacion->logo }} 2x
                     " /></a>
                             <div id="text-14" class="widget widget_text">
                                 <div class="textwidget">
@@ -2668,16 +1743,13 @@
                             <div class="ltx-social ltx-nav-second ltx-type-">
                                 <ul>
                                     <li>
-                                        <a href="#" target="_self"><span class="fa fa-twitter"></span></a>
+                                        <a href="#!" target="_self"><i class="fa-brands fa-facebook"></i></a>
                                     </li>
                                     <li>
-                                        <a href="#" target="_self"><span class="fa fa-facebook-f"></span></a>
+                                        <a href="#!" target="_self"><i class="fa-brands fa-instagram-square"></i></a>
                                     </li>
                                     <li>
-                                        <a href="#" target="_self"><span class="fa fa-instagram"></span></a>
-                                    </li>
-                                    <li>
-                                        <a href="#" target="_self"><span class="fa fa-google-plus"></span></a>
+                                        <a href="#!" target="_self"><i class="fa-brands fa-twitter"></i></a>
                                     </li>
                                 </ul>
                             </div>
@@ -2690,17 +1762,17 @@
                         <div class="footer-widget-area">
                             <div id="ltx_icons-2" class="widget widget_ltx_icons">
                                 <h3 class="header-widget hasIcon">
-                                    <span class="widget-icon icon icon-left_wheat_new"></span>Contact info<span
+                                    <i class="fa-solid fa-message-middle"></i>Contact info<span
                                         class="last widget-icon icon icon-left_wheat_new"></span>
                                 </h3>
                                 <ul class="social-icons-list">
                                     <li>
-                                        <a href="#"><span class="ltx-ic icon icon-location"></span><span
+                                        <a href="#"><i class="fa-solid fa-location-dot"></i><span
                                                 class="txt"><strong> Our location: </strong><br />
                                                 Goldschmidtstraße 13, 04103 Leipzig</span></a>
                                     </li>
                                     <li>
-                                        <a href="#"><span class="ltx-ic icon icon-call"></span><span
+                                        <a href="#"><i class="fa-solid fa-phone"></i><span
                                                 class="txt"><strong> Phones: </strong><br />
                                                 +49078-039-23-11<br />
                                                 +49078-028-55-60</span></a>
@@ -2714,7 +1786,7 @@
                         <div class="footer-widget-area">
                             <div id="custom_html-2" class="widget_text widget widget_custom_html">
                                 <h3 class="header-widget hasIcon">
-                                    <span class="widget-icon icon icon-left_wheat_new"></span>Subscribe<span
+                                    <i class="fa-solid fa-message-middle"></i>Subscribe<span
                                         class="last widget-icon icon icon-left_wheat_new"></span>
                                 </h3>
                                 <div class="textwidget custom-html-widget">
@@ -2756,7 +1828,7 @@
             </div>
         </footer>
     </div>
-    <a href="#" class="ltx-go-top floating ltx-go-top-icon"><span class="go-top-icon-v2 icon icon-beers"></span></a>
+    <a href="#" class="ltx-go-top floating ltx-go-top-icon"><i class="fa fa-whatsapp" aria-hidden="true"></i></a>
     <div class="lt-custom-popup" data-image="wp-content/plugins/lt-custom/images/icon.png"></div>
     <script>
         var tribe_l10n_datatables = {

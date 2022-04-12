@@ -57,7 +57,7 @@ class ProductoController extends Controller
 
         $producto = Producto::create($data);
 
-        return redirect('producto');
+        return redirect('home/producto');
     }
 
     /**
@@ -111,7 +111,7 @@ class ProductoController extends Controller
         $producto = Producto::find($id);
         $producto->update($data);
 
-        return redirect('producto');
+        return redirect('home/producto');
     }
 
     /**
