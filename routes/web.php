@@ -9,11 +9,15 @@ use App\Http\Controllers\ProductoController;
 use App\Http\Controllers\RedesController;
 use App\Http\Controllers\SubCategoriasController;
 use App\Http\Controllers\TestimonioController;
+use App\Models\Categoria;
 use App\Models\Headertron;
+use App\Models\Horario;
 use App\Models\Informacion;
 use App\Models\Producto;
 use App\Models\Testimonio;
 use Illuminate\Support\Facades\Route;
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Mail;
 
 /*
 |--------------------------------------------------------------------------
@@ -29,33 +33,82 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     $informacion = Informacion::first();
     $head = Headertron::all();
-    $testimonio = Testimonio::first();
-    $images = '';
-    foreach ($head as $el) {
-        $images .= '"' . env('APP_URL') . '/storage/' . $el->imagen . '",';
+    $testimonios = Testimonio::all();
+    $horarios = Horario::all();
+    $productos = Producto::orderBy('updated_at', 'DESC')->limit(3)->get();
+    return view('main.index', compact('informacion', 'head', 'productos', 'testimonios', 'horarios'));
+});
+
+Route::get('/contactanos', function (Request $request) {
+
+    $data = $request->all();
+    $informacion = Informacion::first();
+    $horarios = Horario::all();
+    $message = false;
+
+
+    if (!!count($data)) {
+        $subject = "Asunto del correo";
+        $for = "adolfo.gbztt@gmail.com";
+
+        // dd($request->all());
+
+        Mail::send('email', $request->all(), function ($msj) use ($subject, $for) {
+            $msj->from("nashoralex@gmail.com", "NombreQueApareceráComoEmisor");
+            $msj->subject($subject);
+            $msj->to($for);
+        });
+        $message = true;
     }
-    $images =  substr($images, 0, -1);
 
-    // dd($testimonio);
+    return view('main.contactanos', compact('informacion', 'horarios', 'message'));
+});
 
-    // dd($images);
 
-    $productos = Producto::orderBy('updated_at','DESC')->limit(3)->get();
-    return view('main.index', compact('informacion', 'head', 'images','productos','testimonio'));
+Route::post('/contactanos', function (Request $request) {
+    $data = $request->all();
+
+    // dd($data);
+
+    $informacion = Informacion::first();
+    $horarios = Horario::all();
+    $mesaje = true;
+
+
+
+    return redirect('main.contactanos');
+    return view('main.contactanos', compact('informacion', 'horarios', 'mensaje'));
+});
+
+
+
+Route::get('/productos', function (Request $request) {
+    $where = $request->all();
+    if (isset($where['page'])) {
+        unset($where['page']);
+    }
+    $informacion = Informacion::first();
+    $paginator = Producto::where($where)->with('categoria')->paginate(6);
+    $productos_last_modification = Producto::orderBy('updated_at', 'desc')->limit(4)->get();
+    $categorias = Categoria::with('productos')->get();
+    $horarios = Horario::all();
+    return view('main.productos', compact('informacion', 'paginator', 'categorias', 'productos_last_modification', 'horarios'));
 });
 
 
 Route::get('/producto/{id}', function ($id) {
-
     $informacion = Informacion::first();
-    $head = Headertron::all();
-    $producto = Producto::find($id);
+    $producto = Producto::with("categoria", "subcategoria")->find($id);
+    $categoria_id = $producto->categoria_id;
+    $subcategoria_id = $producto->subcategoria_id;
 
-    return view('main.producto', compact('informacion', 'head', 'producto'));
+    $productos_categoria = Producto::where("categoria_id", $categoria_id)->orderby("updated_at", "desc")->whereNotIn('id', [$producto->id])->limit(3)->get();
+    $pl_categorias = $productos_categoria->pluck('id');
+    $productos_subcategoria = Producto::where("subcategoria_id", $subcategoria_id)->orderby("updated_at", "desc")->whereNotIn('id', [$pl_categorias])->limit(3)->get();
+
+    $horarios = Horario::all();
+    return view('main.producto', compact('informacion',  'producto', 'horarios', 'productos_categoria', 'productos_subcategoria'));
 });
-
-
-
 
 Auth::routes([
     'register' => false, // Registration Routes...

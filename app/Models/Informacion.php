@@ -18,5 +18,6 @@ class Informacion extends Model
         "email",
         "email2",
         "logo",
+        "direccion",
     ];
 }

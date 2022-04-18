@@ -39,6 +39,19 @@ class CategoriasController extends Controller
     public function store(Request $request)
     {
         $data = $request->all();
+
+
+
+        if (isset($data['imagen'])) {
+            $image = $request->file('imagen');
+
+            $filename = time() . '.' . $image->getClientOriginalName();
+
+            $path = $request->imagen->storeAs('public/', $filename);
+            $data['imagen'] = $filename;
+        }
+
+
         Categoria::create($data);
         return redirect('home/categoria');
         //
@@ -82,6 +95,18 @@ class CategoriasController extends Controller
     public function update(Request $request, $id)
     {
         $data = $request->all();
+
+        if (isset($data['imagen'])) {
+            $image = $request->file('imagen');
+
+            $filename = time() . '.' . $image->getClientOriginalName();
+
+            $path = $request->imagen->storeAs('public/', $filename);
+            $data['imagen'] = $filename;
+        }
+
+
+
         $cat = Categoria::find($id);
 
         $cat->update($data);
