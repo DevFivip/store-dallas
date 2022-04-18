@@ -77,9 +77,9 @@
             <div class="row">
                 <div class="col-lg-6 col-md-8 align-self-center">
                     <div class="banner-inner">
-                        <h3>Japanese Test</h3>
-                        <h1>Different spice for a Different taste</h1>
-                        <p>You need not only Just Food Stalls with Persons but also specialized equipment  start the Fast Food</p>
+                        <h3>Lorem ipsum dolor</h3>
+                        <h1>Lorem ipsum dolor sit amet.</h1>
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cum placeat delectus fugiat earum, commodi illum laboriosam magni fugit!</p>
                         <a class="btn btn-secondary" href="/productos">Ver Productos</a>
                     </div>
                 </div>
@@ -95,14 +95,14 @@
                 <div class="col-lg-4 col-md-6">
                     <div class="single-intro-contact-wrap">
                         <img src="img/home-2/icon/calendar.png" alt="icon">
-                        <h5>Lunes-Viernes :  07AM - 6:30PM</h5>
+                        <h5>Lunes-Viernes :  07AM - 8:00PM</h5>
                         <p>Horarios Laborares</p>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6">
                     <div class="single-intro-contact-wrap single-intro-contact-wrap-active">
                         <img src="img/home-2/icon/map-marker.png" alt="icon">
-                        <h5>{{$informacion->direccion}}</h5>
+                        <h5>{{ $informacion->direccion }}</h5>
                         <p>Ubicación</p>
                     </div>
                 </div>
@@ -129,33 +129,33 @@
                 </div>
                 <div class="col-lg-6">
                     <div class="section-title text-lg-start text-center">
-                        <h3 class="sub-title">Why choose us</h3>
-                        <h2 class="title">Why we are the best</h2>
-                        <p>A, blandit euismod ullamcorper vestibulum enim habitasse. Ultrices tincidunt scelerisque elit enim. A neque malesuada in tortor eget justo mauris nec dolor. Consequat risus vitae, ac ac et preparation. He wanted to serve burgers, fries and beverages that tasted .</p>
+                        <h3 class="sub-title">Lorem, ipsum dolor. </h3>
+                        <h2 class="title">Lorem ipsum dolor sit amet.</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet, quae ipsum? Aspernatur ipsum rerum voluptates tempora a dolorum, amet quidem eligendi quasi numquam quod quisquam ullam est natus eaque ratione! Maxime, quasi! Ex officiis quisquam deserunt! Eligendi eius illo, cupiditate ratione ducimus ipsa. Itaque!</p>
                     </div>
                     <div class="row">
                         <div class="col-sm-6">
                             <div class="single-about-wrap style-2">
                                 <img src="img/icon/1.png" alt="img">
-                                Fresh food
+                                Variedad de Alimentos
                             </div>
                         </div>
                         <div class="col-sm-6">
                             <div class="single-about-wrap style-2">
                                 <img src="img/icon/2.png" alt="img">
-                                Fast Delivery
+                                Delivery
                             </div>
                         </div>
                         <div class="col-sm-6">
                             <div class="single-about-wrap style-2">
                                 <img src="img/icon/3.png" alt="img">
-                                Quality Maintain
+                                Calidad
                             </div>
                         </div>
                         <div class="col-sm-6">
                             <div class="single-about-wrap style-2">
                                 <img src="img/icon/4.png" alt="img">
-                                24/7 Service
+                                Atención 24/7
                             </div>
                         </div>
                     </div>
