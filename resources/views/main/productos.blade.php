@@ -93,7 +93,7 @@
                             <h4 class="widget-title">Categories</h4>
                             <ul>
                                 @foreach($categorias as $categoria)
-                                <li><a href="/productos?categoria_id={{$categoria->id}}"><img src="storage/{{$categoria->imagen}}" alt="img"> {{$categoria->nombre}} <span>({{count($categoria->productos)}})</span></a></li>
+                                <li><a href="/productos?categoria_id={{$categoria->id}}"><img src="storage/{{$categoria->imagen}}" alt="img" width="30"> {{$categoria->nombre}} <span>({{count($categoria->productos)}})</span></a></li>
                                 @endforeach
                             </ul>
                         </div>
