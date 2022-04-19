@@ -110,6 +110,8 @@ Route::get('/producto/{id}', function ($id) {
     return view('main.producto', compact('informacion',  'producto', 'horarios', 'productos_categoria', 'productos_subcategoria'));
 });
 
+Auth::routes();
+
 // Auth::routes([
 //     'register' => false, // Registration Routes...
 //     'reset' => false, // Password Reset Routes...
