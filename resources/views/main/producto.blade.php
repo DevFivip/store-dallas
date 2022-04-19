@@ -167,7 +167,7 @@
                         <div class="item">
                             <div class="single-item-wrap">
                                 <div class="thumb">
-                                    <img src="/storage/{{$producto->imagen}}" alt="img">
+                                    <img src="/storage/{{$producto->imagen}}" alt="img" width="50">
                                 </div>
                                 <div class="wrap-details">
                                     <h5><a href="/producto/{{$producto->id}}">{{$producto->producto_nombre}}</a></h5>
@@ -188,7 +188,7 @@
                         <div class="item">
                             <div class="single-item-wrap">
                                 <div class="thumb">
-                                    <img src="/storage/{{$producto->imagen}}" alt="img">
+                                    <img src="/storage/{{$producto->imagen}}" alt="img" width="50">
                                 </div>
                                 <div class="wrap-details">
                                     <h5><a href="/producto/{{$producto->id}}">{{$producto->producto_nombre}}</a></h5>

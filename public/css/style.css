@@ -4026,6 +4026,7 @@ ul.side-navbar-items li a:hover {
         + li {
         border-top: none;
     }
+
 }
 @media all and (max-width: 575px) {
     .navbar-area .nav-container .logo a img {
@@ -4306,6 +4307,8 @@ ul.side-navbar-items li a:hover {
 .single-item-wrap .thumb img {
     -webkit-transition: all 0.4s ease-in;
     transition: all 0.4s ease-in;
+    max-height: 300px;
+    max-width: 300px;
 }
 .single-item-wrap .thumb a {
     position: absolute;
