@@ -223,10 +223,10 @@
                 </div>
                 <div class="col-lg-6 col-md-10 order-lg-first align-self-center">
                     <div class="section-title text-lg-start text-center">
-                        <h3 class="sub-title">Why choose us</h3>
-                        <h2 class="title">We Have Excellent Of Quality Japanese Food</h2>
-                        <p>A, blandit euismod ullamcorper vestibulum enim habitasse. Ultrices tincidunt scelerisque elit enim. A neque malesuada in tortor eget justo mauris nec dolor. Consequat risus vitae, ac ac et preparation. He wanted to serve burgers, fries and beverages that tasted .</p>
-                        <a class="btn btn-secondary" href="menu-list.html">CHECK OUR MENU</a>
+                        <h3 class="sub-title">Lorem, ipsum dolor.</h3>
+                        <h2 class="title">Lorem ipsum dolor sitdolor sit.</h2>
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cupiditate quos vel, cum veritatis deleniti nesciunt! Laudantium vitae cupiditate fugit adipisci rerum, impedit quam fugiat accusamus deleniti quo dolorem sunt nisi modi minus, doloremque natus dolores dolore mollitia consequuntur earum velit voluptas necessitatibus. Autem, repellat! .</p>
+                        <a class="btn btn-secondary" href="/productos?categoria_id=1">Ver Prodcutos</a>
                     </div>
                 </div>
             </div>

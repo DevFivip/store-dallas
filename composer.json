@@ -47,7 +47,7 @@
         "post-create-project-cmd": [
             "@php artisan key:generate --ansi"
         ],
-        "criminal": "git add . && git commit -m \"feat: hot feat\" && git push origin master && ssh server && cd public_html/store-1 && git pull origin master "
+        "criminal": "git add . && git commit -m \"feat: hot feat\" && git push origin master && ssh web && cd public_html/store-1 && git pull origin master "
     },
     "extra": {
         "laravel": {
