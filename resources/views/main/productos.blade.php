@@ -17,7 +17,7 @@
     <div class="body-overlay" id="body-overlay"></div>
 
     <!-- navbar start -->
-            @include("layouts.navbar")
+    @include("layouts.navbar")
     <!-- navbar end -->
 
     <!-- bredcrumb Area Start-->
@@ -88,6 +88,15 @@
                 </div>
                 <div class="col-lg-4 order-lg-first">
                     <div class="sidebar-area">
+
+                        <div class="widget widget_search">
+                            <form class="search-form" action="/productos" method="get">
+                                <div class="form-group">
+                                    <input type="text" name="producto_nombre" id="producto_nombre" placeholder="Busca un producto">
+                                </div>
+                                <button class="submit-btn" type="submit"><i class="ri-search-line"></i></button>
+                            </form>
+                        </div>
 
                         <div class="widget widget_categories style-2">
                             <h4 class="widget-title">Categories</h4>

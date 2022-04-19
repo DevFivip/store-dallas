@@ -87,6 +87,17 @@ Route::get('/productos', function (Request $request) {
     if (isset($where['page'])) {
         unset($where['page']);
     }
+
+    if (isset($where['producto_nombre'])) {
+        $pro = $where['producto_nombre'];
+
+        $where[0] = [];
+        $where[0][0] = 'producto_nombre';
+        $where[0][1] = 'like';
+        $where[0][2] = '%' . $pro . '%';
+        unset($where['producto_nombre']);
+    }
+
     $informacion = Informacion::first();
     $paginator = Producto::where($where)->with('categoria')->paginate(6);
     $productos_last_modification = Producto::orderBy('updated_at', 'desc')->limit(4)->get();
